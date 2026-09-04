@@ -3,17 +3,38 @@ export const companyInfo = {
   tagline: "Precision Engineering for the Future of Water Filtration",
   established: 2009,
   location: "Khopoli, Maharashtra",
-  address: "H.No 136, Dheku, Opp. Hi-tech RadiatorsPvt. Ktd. Takai-Adoshi Road, Khopoli, Khalapur, Maharashtra 410203",
+  address: "Opp. Vishal Traders, Sajgoan, Post Dheku, Khopoli, Raigad, Maharashtra 410203",
   phone1: "+91 97626 66660",
   // phone2: "+91 90280 76586",
-  email: "[EMAIL_ADDRESS]",
-  salesEmail: "[EMAIL_ADDRESS]",
+  email: "info@amrengg.net",
   udyam: "MSME (UDYAM-MH-27-0132167)",
   iso: "ISO 9001:2015 Certified",
   aboutShort: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions.",
   aboutLong: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions. Strategically operating out of Khopoli, Maharashtra, our dedicated team of qualified engineers and draftsmen brings over 16 years of specialized domain expertise to the water and wastewater sector. We custom-engineer high-performance systems designed to thrive in extreme conditions, ensuring successful and reliable applications across industrial, municipal, and agricultural markets.",
   aboutSecondary: "When you partner with us, you aren't just getting unparalleled filtration results—you are gaining a resilient, built-to-last solution backed by our unwavering 24/7 service support to keep your operations flowing seamlessly.",
-  vision: "To become the global market leader by offering world-class products in Water Treatment and Filtration Technology and providing safe treated water under 1 roof.",
+  vision: "To become the global market leader by offering world-class products in Water Treatment and Filtration Technology and providing safe treated water under one roof.",
+  coreValues: [
+    { title: "Safety", description: "Ensuring the safety of all personnel, customers, and the environment through the use of proper safety protocols and the latest technology." },
+    { title: "Quality", description: "Providing the highest quality water treatment services and products to our customers." },
+    { title: "Innovation", description: "Adopting the latest technologies and processes to ensure efficient and effective water treatment solutions." },
+    { title: "Reliability", description: "Delivering reliable and consistent services to our customers every time." },
+    { title: "Integrity", description: "Maintaining the highest ethical standards in our dealings to ensure trust and transparency." },
+    { title: "Sustainability", description: "Developing technologies and processes that protect the environment and promote sustainability." }
+  ],
+  environmentSteps: [
+    { title: "Reduce, reuse, and recycle", description: "Encourage people to reduce the amount of waste they generate, reuse items when possible, and recycle as much as possible." },
+    { title: "Plant Trees", description: "Planting trees is one of the best ways to reduce environmental damage. Trees absorb carbon dioxide, a major greenhouse gas, and other pollutants while releasing oxygen into the atmosphere." },
+    { title: "Conserve Energy", description: "Educate people on ways to conserve energy, such as turning off lights when they aren't needed, using energy-efficient appliances, and unplugging electronics when they aren't in use." },
+    { title: "Use Renewable Energy Sources", description: "Encourage the use of renewable energy sources, such as solar and wind energy, which don't rely on finite resources and are much more eco-friendly." },
+    { title: "Reduce Water Usage", description: "Educate people about ways to reduce water usage, such as taking shorter showers, using low-flow faucets and toilets, and fixing leaky pipes." },
+    { title: "Cut Down on Chemical Use", description: "Discourage the use of hazardous chemicals, such as pesticides and fertilizers, which can pollute groundwater and other bodies of water." },
+    { title: "Eat Locally", description: "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation." }
+  ],
+  sectors: [
+    { title: "Industry", description: "Industry water filtration is a process of removing impurities from water to make it suitable for various industrial and commercial applications." },
+    { title: "Irrigation", description: "Water filtration is the process of removing impurities from water by using a physical barrier, chemical agents, or biological processes." },
+    { title: "Municipal", description: "Municipal water filtration is the process of purifying water from a municipal water supply in order to make it safe for drinking, cooking, and other uses." }
+  ],
   commitments: [
     {
       title: "Sustained Development",
@@ -67,49 +88,57 @@ export const companyInfo = {
       id: "flosam",
       category: "Screen Filters",
       brand: "FLOSAM",
-      description: "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters."
+      description: "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters.",
+      image: "/screen_filter.jpg"
     },
     {
       id: "aqualife",
       category: "Media Filters",
       brand: "AQUALIFE",
-      description: "Suitable for organic and inorganic contaminants; utilizes tanks filled with glass, sand, or gravel, cleaned by reversing the water flow."
+      description: "Suitable for organic and inorganic contaminants; utilizes tanks filled with glass, sand, or gravel, cleaned by reversing the water flow.",
+      image: "/media_filter.jpg"
     },
     {
       id: "coallife",
       category: "Carbon Filters",
       brand: "COALLIFE",
-      description: "Uses highly porous activated carbon to remove impurities, volatile organic compounds (VOCs), chemicals like chlorine, gases, and odors via adsorption."
+      description: "Uses highly porous activated carbon to remove impurities, volatile organic compounds (VOCs), chemicals like chlorine, gases, and odors via adsorption.",
+      image: "/carbon_filter.jpg"
     },
     {
       id: "metalife",
       category: "Metal Removal Filters",
       brand: "METALIFE",
-      description: "Designed to eliminate toxic heavy metals (lead, arsenic, mercury) and nuisance metals (iron, manganese) to improve water taste, odor, and safety."
+      description: "Designed to eliminate toxic heavy metals (lead, arsenic, mercury) and nuisance metals (iron, manganese) to improve water taste, odor, and safety.",
+      image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "hcfsam",
       category: "Hydro Cyclone",
       brand: "HCFSAM",
-      description: "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base."
+      description: "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base.",
+      image: "/hydro_cyclone.jpg"
     },
     {
       id: "hdlsam",
       category: "Hydraulic Filters",
       brand: "HDLSAM",
-      description: "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h."
+      description: "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h.",
+      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "ecosam",
       category: "Lamella Plate Settler",
       brand: "ECOSAM",
-      description: "High-rate gravity sedimentation devices that remove suspended solids, reducing necessary tank sizes by 80% to 90% compared to conventional clarifiers."
+      description: "High-rate gravity sedimentation devices that remove suspended solids, reducing necessary tank sizes by 80% to 90% compared to conventional clarifiers.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "mixsam",
       category: "Static Mixer",
       brand: "MIXSAM",
-      description: "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption."
+      description: "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption.",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
     }
   ],
   hseq: {
