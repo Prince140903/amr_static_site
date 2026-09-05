@@ -31,9 +31,11 @@ export const companyInfo = {
     { title: "Eat Locally", description: "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation." }
   ],
   sectors: [
-    { title: "Industry", description: "Industry water filtration is a process of removing impurities from water to make it suitable for various industrial and commercial applications." },
-    { title: "Irrigation", description: "Water filtration is the process of removing impurities from water by using a physical barrier, chemical agents, or biological processes." },
-    { title: "Municipal", description: "Municipal water filtration is the process of purifying water from a municipal water supply in order to make it safe for drinking, cooking, and other uses." }
+    { title: "River Water", icon: "Waves" },
+    { title: "Lake/Pond Water", icon: "Droplet" },
+    { title: "Dam Water", icon: "Anchor" },
+    { title: "Industrial Water", icon: "Factory" },
+    { title: "Sea Water", icon: "Ship" }
   ],
   commitments: [
     {

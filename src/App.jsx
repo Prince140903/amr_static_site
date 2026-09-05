@@ -61,15 +61,15 @@ function Layout({ children }) {
 
           {/* Logo Brand */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg p-1 shadow-sm">
+            <div className="w-40 h-20 flex items-center justify-center bg-white rounded-lg p-1 shadow-sm">
               <img src="/assets/logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
             </div>
-            <div>
+            {/* <div>
               <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-amr-orange transition-colors">
                 AMR <span className="text-slate-500 font-medium">ENGINEERING</span>
               </span>
               <span className="block text-[10px] tracking-widest text-slate-400 font-bold uppercase">Works</span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Nav Links */}
@@ -77,7 +77,7 @@ function Layout({ children }) {
             <Link to="/" className="text-sm font-semibold text-slate-900 hover:text-amr-orange transition">Home</Link>
             <Link to="/#about" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">About Us</Link>
             <Link to="/#objectives" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Water Treatment</Link>
-            
+
             <div className="relative group py-2">
               <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">Products</span>
               <div className="absolute top-full left-0 w-48 bg-white border border-slate-200 shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
@@ -121,7 +121,7 @@ function Layout({ children }) {
           </div>
         )}
       </header>
-      
+
       <main className="flex-1">
         {children}
       </main>

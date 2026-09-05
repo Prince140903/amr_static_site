@@ -93,9 +93,9 @@ export default function ProductPage() {
                 </div>
 
                 <div className="pt-8 flex flex-wrap gap-4">
-                  <a href={`mailto:${companyInfo.email}?subject=Inquiry about ${product.brand} (${product.category})`} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-lg shadow-lg transition-transform hover:-translate-y-0.5">
-                    Request a Quote
-                  </a>
+                  <Link to="/#contact" state={{ product: product.brand, category: product.category }} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-lg shadow-lg transition-transform hover:-translate-y-0.5">
+                    Enquire Now
+                  </Link>
                   <a href={`tel:${companyInfo.phone1.replace(/\s+/g, '')}`} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg shadow-sm transition-colors">
                     Call Sales
                   </a>

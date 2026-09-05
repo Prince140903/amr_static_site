@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Phone,
   Mail,
@@ -12,18 +12,57 @@ import {
   Settings,
   Wrench,
   Check,
-  Droplet
+  Droplet,
+  Waves,
+  Anchor,
+  Factory,
+  Ship,
+  ChevronLeft
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { companyInfo } from '../data';
+import emailjs from '@emailjs/browser';
+import {
+  RiverWaterIcon,
+  LakeWaterIcon,
+  DamWaterIcon,
+  IndustrialWaterIcon,
+  SeaWaterIcon
+} from '../components/SectorIcons';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('engineering'); // project management tab
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
+  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '', productName: '' });
   const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const location = useLocation();
+  const sliderRef = useRef(null);
+
+  const scrollSlider = (direction) => {
+    if (sliderRef.current) {
+      const scrollAmount = 300;
+      sliderRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const getSectorIcon = (iconName) => {
+    switch (iconName) {
+      case 'Waves': return <RiverWaterIcon className="w-full h-full" />;
+      case 'Droplet': return <LakeWaterIcon className="w-full h-full" />;
+      case 'Anchor': return <DamWaterIcon className="w-full h-full" />;
+      case 'Factory': return <IndustrialWaterIcon className="w-full h-full" />;
+      case 'Ship': return <SeaWaterIcon className="w-full h-full" />;
+      default: return <LakeWaterIcon className="w-full h-full" />;
+    }
+  };
 
   useEffect(() => {
+    if (location.state?.product) {
+      setContactForm(prev => ({
+        ...prev,
+        productName: location.state.product
+      }));
+    }
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
       if (element) {
@@ -32,13 +71,43 @@ export default function Home() {
     }
   }, [location]);
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    setContactSubmitted(true);
-    setTimeout(() => {
-      setContactSubmitted(false);
-      setContactForm({ name: '', email: '', message: '' });
-    }, 5000);
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        user_name: contactForm.name,
+        user_email: contactForm.email,
+        message: contactForm.message,
+        product_name: contactForm.productName || 'General Inquiry'
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setContactSubmitted(true);
+      setContactForm({ name: '', email: '', message: '', productName: '' });
+      setTimeout(() => {
+        setContactSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('FAILED...', error);
+      alert('Failed to send the message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,7 +115,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-white py-20 px-4">
         <div className="absolute inset-0 bg-slate-900 overflow-hidden">
-          <img src="/assets/Banner.jpg" alt="Hero Banner" className="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+          <img src="/assets/Banner.jpg" alt="Hero Banner" className="w-full h-full object-cover opacity-90 mix-blend-hard-light" />
         </div>
         <div className="max-w-5xl mx-auto text-center space-y-8 z-10 relative">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner">
@@ -87,7 +156,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amr-navy/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 right-6 bg-gradient-to-br from-amr-navy to-slate-900 border border-slate-800 text-white p-5 rounded-xl shadow-xl flex items-center gap-4">
-                  <div className="text-4xl font-extrabold text-amr-orange">20+</div>
+                  <div className="text-4xl font-extrabold text-amr-orange">16+</div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                     Years of Combined<br />Expertise
                   </div>
@@ -144,28 +213,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* New Sectors Section (from DOCX) */}
-      <section className="py-24 bg-slate-50 border-t border-slate-200">
+      {/* New Sectors Section */}
+      <section className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="text-xs font-bold tracking-widest text-amr-orange uppercase">Applications</div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Sectors We Serve
             </h2>
-            <p className="text-slate-500 text-sm">
-              Delivering high-performance filtration solutions across multiple industries.
-            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {companyInfo.sectors.map((sector, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-amr-orange/40 transition duration-300">
-                <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-amr-orange mb-4">
-                  <Droplet className="w-6 h-6" />
+
+          <div className="relative group">
+
+            {/* Slider Container */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16 px-4">
+              {companyInfo.sectors.map((sector, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center group"
+                >
+                  {/* Icon area — same height for every sector */}
+                  <div className="w-full h-40 md:h-48 flex items-center justify-center mb-8">
+                    <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+                      {getSectorIcon(sector.icon)}
+                    </div>
+                  </div>
+
+                  {/* Title area — same starting position */}
+                  <div className="min-h-[56px] flex items-start justify-center">
+                    <h3 className="text-lg md:text-xl font-extrabold text-amr-navy tracking-tight leading-tight">
+                      {sector.title}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{sector.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{sector.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -402,6 +484,17 @@ export default function Home() {
                       />
                     </div>
                   </div>
+                  {contactForm.productName && (
+                    <div className="space-y-2">
+                      <label className="text-xs font-semibold text-slate-600">Product Inquiry</label>
+                      <input
+                        type="text"
+                        readOnly
+                        value={contactForm.productName}
+                        className="w-full px-4 py-3 bg-slate-100 border border-slate-200 rounded-lg text-slate-500 cursor-not-allowed"
+                      />
+                    </div>
+                  )}
                   <div className="space-y-2">
                     <label className="text-xs font-semibold text-slate-600">Project / Request Summary</label>
                     <textarea
@@ -415,9 +508,10 @@ export default function Home() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-lg shadow-lg uppercase tracking-wider text-xs transition"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-lg shadow-lg uppercase tracking-wider text-xs transition disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Submit Inquiry
+                    {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
                   </button>
                 </form>
               )}
