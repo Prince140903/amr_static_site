@@ -97,7 +97,7 @@ export const companyInfo = {
         "/assets/Products/flosam2.jpg",
         "/assets/Products/flosam3.jpg",
         "/assets/Products/flosam4.jpg",
-        "/assets/Products/flosam5.jpg"
+        // "/assets/Products/flosam5.jpg"
       ]
     },
     {
@@ -126,9 +126,9 @@ export const companyInfo = {
       category: "Hydro Cyclone",
       brand: "HCFSAM",
       description: "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base.",
-      image: "/assets/Products/hcfsam1.jpg",
+      image: "/assets/Products/hcfsam.jpg",
       images: [
-        "/assets/Products/hcfsam1.jpg",
+        "/assets/Products/hcfsam.jpg",
         "/assets/Products/hcfsam2.jpg"
       ]
     },
@@ -137,9 +137,10 @@ export const companyInfo = {
       category: "Hydraulic Filters",
       brand: "HDLSAM",
       description: "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h.",
-      image: "/assets/Products/hdlsam1.jpg",
+      image: "/assets/Products/HDLSAM.jpg",
       images: [
-        "/assets/Products/hdlsam1.jpg",
+        "/assets/Products/HDLSAM.jpg",
+        // "/assets/Products/hdlsam1.jpg",
         "/assets/Products/hdlsam2.jpg",
         "/assets/Products/hdlsam3.jpg",
         "/assets/Products/hdlsam4.jpg"
@@ -157,9 +158,9 @@ export const companyInfo = {
       category: "Static Mixer",
       brand: "MIXSAM",
       description: "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption.",
-      image: "/assets/Products/mixsam1.jpg",
+      image: "/assets/Products/mixsam.jpg",
       images: [
-        "/assets/Products/mixsam1.jpg",
+        "/assets/Products/mixsam.jpg",
         "/assets/Products/mixsam2.jpg"
       ]
     }

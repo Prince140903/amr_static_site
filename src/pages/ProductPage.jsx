@@ -123,7 +123,7 @@ export default function ProductPage() {
                   <Link to="/#contact" state={{ product: product.brand, category: product.category }} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-lg shadow-lg transition-transform hover:-translate-y-0.5">
                     Enquire Now
                   </Link>
-                  <a href={`tel:${companyInfo.phone1.replace(/\s+/g, '')}`} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg shadow-sm transition-colors">
+                  <a href={`tel:${companyInfo.phone1.replace(/\s+/g, '')}`} className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg shadow-sm transition-colors md:hidden">
                     Call Sales
                   </a>
                 </div>

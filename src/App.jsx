@@ -110,7 +110,7 @@ function Layout({ children }) {
           {/* Logo Brand */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-40 h-20 flex items-center justify-center bg-white rounded-lg p-1 shadow-sm">
-              <img src="/assets/logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
+              <img src="/assets/amr-web-logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
             </div>
             {/* <div>
               <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-amr-orange transition-colors">
@@ -137,14 +137,14 @@ function Layout({ children }) {
               </div>
             </div>
 
-            <div className="relative group py-2">
+            {/* <div className="relative group py-2">
               <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">Operations</span>
               <div className="absolute top-full left-0 w-48 bg-white border border-slate-200 shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                 <a href="#" onClick={handlePlaceholderClick} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amr-orange">
                   AMC
                 </a>
               </div>
-            </div>
+            </div> */}
           </nav>
 
           {/* Mobile Hamburger menu */}
@@ -179,12 +179,12 @@ function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center bg-white rounded-lg p-1">
-                <img src="/assets/logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
+              <div className="w-26 h-16 flex items-center justify-center rounded-lg p-1">
+                <img src="/assets/amr-web-logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
               </div>
-              <span className="text-base font-bold text-white tracking-tight">
+              {/* <span className="text-base font-bold text-white tracking-tight">
                 AMR ENGINEERING
-              </span>
+              </span> */}
             </div>
             <p className="leading-relaxed">
               {companyInfo.aboutShort}

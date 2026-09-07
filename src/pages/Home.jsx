@@ -151,7 +151,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/40 to-slate-950/85"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-center space-y-8 z-10 relative">
+        <div className="max-w-5xl mx-auto text-center space-y-6 z-10 relative">
           <div className="inline-flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
             <Award className="w-4 h-4" />
             Over 16 Years of Engineering Precision
@@ -163,7 +163,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-100 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            To overcome global challenges in the field of <strong className="text-white font-medium">WATER FILTRATION</strong>, meet our responsibility to the environment. Custom engineered high-performance systems.
+            We address global water filtration challenges and honor our environmental responsibility through custom-engineered, high-performance systems.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a href="#products" className="px-8 py-3.5 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="pt-4">
                 <a
                   href={`tel:${companyInfo.phone1.replace(/\s+/g, '')}`}
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold transition"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-amr-orange to-amber-500 text-white px-6 py-3 rounded-lg shadow-lg font-semibold transition cursor-default"
                 >
                   <Phone className="w-4 h-4" />
                   Call Us Now: {companyInfo.phone1}
@@ -600,8 +600,8 @@ export default function Home() {
                         }}
                         placeholder="Answer"
                         className={`w-28 px-4 py-3 bg-white border rounded-lg focus:outline-none focus:ring-1 transition ${captchaError
-                            ? 'border-red-400 focus:border-red-500 focus:ring-red-500 text-red-900'
-                            : 'border-slate-200 focus:border-amr-orange focus:ring-amr-orange text-slate-900'
+                          ? 'border-red-400 focus:border-red-500 focus:ring-red-500 text-red-900'
+                          : 'border-slate-200 focus:border-amr-orange focus:ring-amr-orange text-slate-900'
                           }`}
                       />
                       <button
