@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import {
   Phone,
@@ -14,20 +14,68 @@ import { companyInfo } from './data';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function ScrollManager() {
+  const { pathname, hash } = useLocation();
+  const prevPathRef = useRef(pathname);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const prevPath = prevPathRef.current;
+    const pathChanged = prevPath !== pathname;
+    prevPathRef.current = pathname;
+
+    // No hash → go to the top of the (new) page.
+    if (!hash) {
+      if (pathChanged) {
+        window.scrollTo(0, 0);
+      } else {
+        // Same page, hash cleared (e.g. clicking "Home").
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // Cross-page navigation: reset to top first so we start clean on the new page,
+    // then scroll to the anchored section once it has rendered.
+    if (pathChanged) window.scrollTo(0, 0);
+
+    const id = hash.replace('#', '');
+    let attempts = 0;
+    let cancelled = false;
+
+    const scrollToHash = () => {
+      if (cancelled) return;
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (attempts < 25) {
+        // Element not mounted yet (Home still rendering) — retry shortly.
+        attempts += 1;
+        setTimeout(scrollToHash, 80);
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    const t = setTimeout(scrollToHash, pathChanged ? 150 : 0);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [pathname, hash]);
+
   return null;
 }
 
 function Layout({ children }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Placeholder links that don't have a destination page yet:
+  // prevent the default "#" jump so the page never "sticks" at a bogus hash.
+  const handlePlaceholderClick = (e) => e.preventDefault();
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
-      <ScrollToTop />
+      <ScrollManager />
       {/* Top Banner (ISO & MSME Certifications) */}
       <div className="bg-gradient-to-r from-amr-navy via-slate-900 to-amr-navy text-white text-xs py-2 px-4 border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -92,7 +140,7 @@ function Layout({ children }) {
             <div className="relative group py-2">
               <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">Operations</span>
               <div className="absolute top-full left-0 w-48 bg-white border border-slate-200 shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                <a href="#" className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amr-orange">
+                <a href="#" onClick={handlePlaceholderClick} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amr-orange">
                   AMC
                 </a>
               </div>
@@ -186,9 +234,9 @@ function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-600">
           <p>© {new Date().getFullYear()} AMR Engineering Works. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-slate-400">Privacy Policy</a>
+            <a href="#" onClick={handlePlaceholderClick} className="hover:text-slate-400">Privacy Policy</a>
             <span>•</span>
-            <a href="#" className="hover:text-slate-400">Terms of Use</a>
+            <a href="#" onClick={handlePlaceholderClick} className="hover:text-slate-400">Terms of Use</a>
           </div>
         </div>
       </footer>

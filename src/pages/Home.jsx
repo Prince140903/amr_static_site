@@ -17,7 +17,8 @@ import {
   Anchor,
   Factory,
   Ship,
-  ChevronLeft
+  ChevronLeft,
+  RefreshCw
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { companyInfo } from '../data';
@@ -32,9 +33,29 @@ import {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('engineering'); // project management tab
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '', productName: '' });
+  const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', message: '', productName: '', captcha: '' });
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaError, setCaptchaError] = useState(false);
+  const [shakeKey, setShakeKey] = useState(0);
+
+  // Simple math captcha generation (prevents bots)
+  const generateCaptcha = () => {
+    const ops = ['+', '-', '×'];
+    const op = ops[Math.floor(Math.random() * ops.length)];
+    let a = Math.floor(Math.random() * 9) + 1;
+    let b = Math.floor(Math.random() * 9) + 1;
+    if (op === '-' && a < b) [a, b] = [b, a];
+    const answer = op === '+' ? a + b : op === '-' ? a - b : a * b;
+    return { a, b, op, answer };
+  };
+
+  const [captcha, setCaptcha] = useState(generateCaptcha);
+  const refreshCaptcha = () => {
+    setCaptcha(generateCaptcha());
+    setContactForm(prev => ({ ...prev, captcha: '' }));
+    setCaptchaError(false);
+  };
   const location = useLocation();
   const sliderRef = useRef(null);
 
@@ -63,22 +84,28 @@ export default function Home() {
         productName: location.state.product
       }));
     }
-    if (location.hash) {
-      const element = document.getElementById(location.hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
+  }, [location.state?.product]);
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
+
+    // CAPTCHA verification before submission
+    if (parseInt(contactForm.captcha, 10) !== captcha.answer) {
+      // Visual error state: red highlight + shake + inline message
+      setCaptchaError(true);
+      setShakeKey(k => k + 1);
+      setCaptcha(generateCaptcha());
+      setContactForm(prev => ({ ...prev, captcha: '' }));
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       const templateParams = {
         user_name: contactForm.name,
         user_email: contactForm.email,
+        user_phone: contactForm.phone,
         message: contactForm.message,
         product_name: contactForm.productName || 'General Inquiry'
       };
@@ -98,7 +125,8 @@ export default function Home() {
       );
 
       setContactSubmitted(true);
-      setContactForm({ name: '', email: '', message: '', productName: '' });
+      setContactForm({ name: '', email: '', phone: '', message: '', productName: '', captcha: '' });
+      refreshCaptcha();
       setTimeout(() => {
         setContactSubmitted(false);
       }, 5000);
@@ -114,28 +142,34 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-white py-20 px-4">
-        <div className="absolute inset-0 bg-slate-900 overflow-hidden">
-          <img src="/assets/Banner.jpg" alt="Hero Banner" className="w-full h-full object-cover opacity-90 mix-blend-hard-light" />
+        {/* Background image + dark overlay layers for text readability */}
+        <div className="absolute inset-0 bg-slate-950 overflow-hidden">
+          <img src="/assets/Banner.jpg" alt="Hero Banner" className="w-full h-full object-cover opacity-70" />
+          {/* Base darkening */}
+          <div className="absolute inset-0 bg-slate-950/45"></div>
+          {/* Vertical gradient overlay to keep center text area readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/40 to-slate-950/85"></div>
         </div>
+
         <div className="max-w-5xl mx-auto text-center space-y-8 z-10 relative">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner">
+          <div className="inline-flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
             <Award className="w-4 h-4" />
             Over 16 Years of Engineering Precision
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
             Precision Engineering for the <br className="hidden md:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-amber-200 to-orange-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Future of Water Filtration
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-100 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             To overcome global challenges in the field of <strong className="text-white font-medium">WATER FILTRATION</strong>, meet our responsibility to the environment. Custom engineered high-performance systems.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <a href="#products" className="px-8 py-3.5 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+            <a href="#products" className="px-8 py-3.5 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
               Explore Products
             </a>
-            <a href="#about" className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+            <a href="#about" className="px-8 py-3.5 bg-slate-950/40 hover:bg-slate-950/60 text-white border border-white/40 backdrop-blur-md font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
               Get to Know Us
             </a>
           </div>
@@ -270,6 +304,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Water Treatment Objectives */}
+      <section id="objectives" className="py-24 bg-slate-50 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="text-xs font-bold tracking-widest text-amr-orange uppercase">Water Treatment</div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Our Treatment Objectives
+            </h2>
+            <p className="text-slate-500 text-sm">
+              A complete, safe water treatment solution depends on a clear set of purification objectives tailored to your source water and end use.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {companyInfo.waterTreatmentObjectives.map((objective, i) => (
+              <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-sm hover:shadow-md hover:border-amr-orange/30 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-amr-orange font-bold">
+                  {i + 1}
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">{objective}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products & Services */}
       <section id="products" className="py-24 bg-white border-t border-slate-100 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -293,7 +352,7 @@ export default function Home() {
               >
                 <div className="h-48 w-full overflow-hidden bg-slate-100">
                   {p.image ? (
-                    <img src={p.image} alt={p.brand} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <img src={p.image} alt={p.brand} className="w-full h-full object-contain group-hover:scale-105 transition duration-500" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-slate-400">No Image</div>
                   )}
@@ -458,7 +517,7 @@ export default function Home() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleContactSubmit} className="space-y-6">
+                <form onSubmit={handleContactSubmit} className="space-y-2">
                   <h3 className="text-xl font-bold text-slate-900">Send us a direct message</h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -484,6 +543,18 @@ export default function Home() {
                       />
                     </div>
                   </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-semibold text-slate-600">Phone Number</label>
+                    <input
+                      type="tel"
+                      required
+                      value={contactForm.phone}
+                      onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                      placeholder="+91 XXXXX XXXXX"
+                      className="w-full px-4 py-3 bg-white border border-slate-200 focus:border-amr-orange focus:ring-1 focus:ring-amr-orange rounded-lg focus:outline-none text-slate-900 transition"
+                    />
+                  </div>
                   {contactForm.productName && (
                     <div className="space-y-2">
                       <label className="text-xs font-semibold text-slate-600">Product Inquiry</label>
@@ -506,6 +577,52 @@ export default function Home() {
                       className="w-full px-4 py-3 bg-white border border-slate-200 focus:border-amr-orange focus:ring-1 focus:ring-amr-orange rounded-lg focus:outline-none text-slate-900 transition"
                     ></textarea>
                   </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-semibold text-slate-600">Security Check</label>
+                    <div
+                      key={shakeKey}
+                      className={`flex items-center gap-3 flex-wrap p-3 rounded-xl border transition-colors ${captchaError ? 'border-red-300 bg-red-50 animate-shake' : 'border-transparent'
+                        }`}
+                    >
+                      <div className={`px-4 py-3 border rounded-lg text-lg font-bold select-none tracking-wider transition-colors ${captchaError ? 'bg-red-100 border-red-300 text-red-700' : 'bg-slate-100 border-slate-200 text-slate-800'
+                        }`}>
+                        {captcha.a} {captcha.op} {captcha.b} = ?
+                      </div>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        required
+                        aria-invalid={captchaError}
+                        value={contactForm.captcha}
+                        onChange={(e) => {
+                          setContactForm({ ...contactForm, captcha: e.target.value });
+                          if (captchaError) setCaptchaError(false);
+                        }}
+                        placeholder="Answer"
+                        className={`w-28 px-4 py-3 bg-white border rounded-lg focus:outline-none focus:ring-1 transition ${captchaError
+                            ? 'border-red-400 focus:border-red-500 focus:ring-red-500 text-red-900'
+                            : 'border-slate-200 focus:border-amr-orange focus:ring-amr-orange text-slate-900'
+                          }`}
+                      />
+                      <button
+                        type="button"
+                        onClick={refreshCaptcha}
+                        title="New question"
+                        className="p-3 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg text-slate-500 transition"
+                      >
+                        <RefreshCw className="w-4 h-4" />
+                      </button>
+                    </div>
+                    {captchaError ? (
+                      <p className="text-xs font-semibold text-red-500 flex items-center gap-1.5">
+                        <span aria-hidden="true">✕</span>
+                        Incorrect security answer — a new question has been generated. Please try again.
+                      </p>
+                    ) : (
+                      <p className="text-xs text-slate-400">Solve the simple math question to prove you're human.</p>
+                    )}
+                  </div>
+
                   <button
                     type="submit"
                     disabled={isSubmitting}

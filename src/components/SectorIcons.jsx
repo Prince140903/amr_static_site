@@ -1,10 +1,10 @@
 import React from 'react';
 
-import lakeGif from "../../public/assets/gifs/lake.gif";
-import riverGif from "../../public/assets/gifs/river.gif";
-import wasteGif from "../../public/assets/gifs/waste.gif";
-import waterDamGif from "../../public/assets/gifs/water-dam-animation-gif-download-14977124.mp4";
-import wavesGif from "../../public/assets/gifs/waves.gif";
+import lakeGif from "/assets/gifs/lake.gif";
+import riverGif from "/assets/gifs/river.gif";
+import wasteGif from "/assets/gifs/waste.gif";
+import waterDamGif from "/assets/gifs/dam.gif";
+import wavesGif from "/assets/gifs/waves.gif";
 
 export const RiverWaterIcon = ({ className }) => (
   <img src={riverGif} alt="River water" className={className} />

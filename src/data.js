@@ -91,56 +91,77 @@ export const companyInfo = {
       category: "Screen Filters",
       brand: "FLOSAM",
       description: "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters.",
-      image: "/screen_filter.jpg"
+      image: "/assets/Products/flosam1.jpg",
+      images: [
+        "/assets/Products/flosam1.jpg",
+        "/assets/Products/flosam2.jpg",
+        "/assets/Products/flosam3.jpg",
+        "/assets/Products/flosam4.jpg",
+        "/assets/Products/flosam5.jpg"
+      ]
     },
     {
       id: "aqualife",
       category: "Media Filters",
       brand: "AQUALIFE",
       description: "Suitable for organic and inorganic contaminants; utilizes tanks filled with glass, sand, or gravel, cleaned by reversing the water flow.",
-      image: "/media_filter.jpg"
+      image: "/assets/Products/aqualife.jpg"
     },
     {
       id: "coallife",
       category: "Carbon Filters",
       brand: "COALLIFE",
       description: "Uses highly porous activated carbon to remove impurities, volatile organic compounds (VOCs), chemicals like chlorine, gases, and odors via adsorption.",
-      image: "/carbon_filter.jpg"
+      image: "/assets/Products/coallife.jpg"
     },
     {
       id: "metalife",
       category: "Metal Removal Filters",
       brand: "METALIFE",
       description: "Designed to eliminate toxic heavy metals (lead, arsenic, mercury) and nuisance metals (iron, manganese) to improve water taste, odor, and safety.",
-      image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80"
+      image: "/assets/Products/metalife.jpg"
     },
     {
       id: "hcfsam",
       category: "Hydro Cyclone",
       brand: "HCFSAM",
       description: "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base.",
-      image: "/hydro_cyclone.jpg"
+      image: "/assets/Products/hcfsam1.jpg",
+      images: [
+        "/assets/Products/hcfsam1.jpg",
+        "/assets/Products/hcfsam2.jpg"
+      ]
     },
     {
       id: "hdlsam",
       category: "Hydraulic Filters",
       brand: "HDLSAM",
       description: "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h.",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
+      image: "/assets/Products/hdlsam1.jpg",
+      images: [
+        "/assets/Products/hdlsam1.jpg",
+        "/assets/Products/hdlsam2.jpg",
+        "/assets/Products/hdlsam3.jpg",
+        "/assets/Products/hdlsam4.jpg"
+      ]
     },
     {
       id: "ecosam",
       category: "Lamella Plate Settler",
       brand: "ECOSAM",
       description: "High-rate gravity sedimentation devices that remove suspended solids, reducing necessary tank sizes by 80% to 90% compared to conventional clarifiers.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+      image: "/assets/Products/ecosam.jpg"
     },
     {
       id: "mixsam",
       category: "Static Mixer",
       brand: "MIXSAM",
       description: "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption.",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
+      image: "/assets/Products/mixsam1.jpg",
+      images: [
+        "/assets/Products/mixsam1.jpg",
+        "/assets/Products/mixsam2.jpg"
+      ]
     }
   ],
   hseq: {
