@@ -141,37 +141,63 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center text-white py-20 px-4">
-        {/* Background image + dark overlay layers for text readability */}
-        <div className="absolute inset-0 bg-slate-950 overflow-hidden">
-          <img src="/assets/Banner.jpg" alt="Hero Banner" className="w-full h-full object-cover opacity-70" />
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center text-white py-20 px-4 overflow-hidden">
+        {/* Background image + dark overlay layers */}
+        <div className="absolute inset-0 bg-slate-950">
+          <img
+            src="/assets/Banner.jpg"
+            alt="Hero Banner"
+            className="w-full h-full object-cover object-[65%_center] opacity-70"
+          />
+
           {/* Base darkening */}
-          <div className="absolute inset-0 bg-slate-950/45"></div>
-          {/* Vertical gradient overlay to keep center text area readable */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/40 to-slate-950/85"></div>
+          {/* <div className="absolute inset-0 bg-slate-950/45"></div> */}
+
+          {/* Left-to-right gradient for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-slate-950/10 to-transparent"></div>
+
+          {/* Bottom gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-transparent to-slate-950/85"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-center space-y-6 z-10 relative">
-          <div className="inline-flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
-            <Award className="w-4 h-4" />
-            Over 16 Years of Engineering Precision
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
-            Precision Engineering for the <br className="hidden md:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-amber-200 to-orange-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Future of Water Filtration
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-slate-100 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            We address global water filtration challenges and honor our environmental responsibility through custom-engineered, high-performance systems.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <a href="#products" className="px-8 py-3.5 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-              Explore Products
-            </a>
-            <a href="#about" className="px-8 py-3.5 bg-slate-950/40 hover:bg-slate-950/60 text-white border border-white/40 backdrop-blur-md font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-              Get to Know Us
-            </a>
+        {/* Left-aligned content */}
+        <div className="max-w-8xl mx-auto w-full relative z-10 ml-20">
+          <div className="max-w-3xl text-left space-y-4">
+
+            <div className="inline-flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+              <Award className="w-4 h-4" />
+              Over 16 Years of Engineering Precision
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
+              Precision Engineering for the{" "}
+              <br className="hidden md:inline" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-amber-200 to-orange-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                Future of Water Filtration
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-slate-100 max-w-2xl font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              We address global water filtration challenges and honor our environmental responsibility through custom-engineered, high-performance systems.
+            </p>
+
+            <div className="flex flex-wrap justify-start gap-4 pt-4">
+              <a
+                href="#products"
+                className="px-8 py-3.5 bg-gradient-to-r from-amr-orange to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Explore Products
+              </a>
+
+              <a
+                href="#about"
+                className="px-8 py-3.5 bg-slate-950/40 hover:bg-slate-950/60 text-white border border-white/40 backdrop-blur-md font-semibold rounded-lg shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Get to Know Us
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
