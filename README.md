@@ -14,3 +14,12 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## Screenshots
+
+<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/f8bd0aeb-5921-4166-a039-9ae29670f684" />
+
+<br />
+<br />
+
+<img width="1904" height="993" alt="image" src="https://github.com/user-attachments/assets/180f9a09-b4d7-4fd2-b6b8-847a0031b688" />
