@@ -8,6 +8,7 @@ export default function ProductPage() {
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [activeImage, setActiveImage] = useState(0);
+const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -95,9 +96,18 @@ export default function ProductPage() {
 
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Product Description</h3>
-                  <p className="text-slate-600 leading-relaxed text-base">
-                    {product.description}
+                  <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">
+                    {expanded ? (product.longDescription || product.description) : product.description}
                   </p>
+                  {product.longDescription && product.longDescription !== product.description && (
+                    <button
+                      type="button"
+                      onClick={() => setExpanded(e => !e)}
+                      className="text-amr-orange text-sm font-bold mt-2 hover:underline"
+                    >
+                      {expanded ? "Show less" : "Read more"}
+                    </button>
+                  )}
                 </div>
 
                 {/* Example placeholder data since specific details per product aren't in docx. */}
