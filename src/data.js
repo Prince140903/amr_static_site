@@ -30,6 +30,16 @@ export const companyInfo = {
     { title: "Cut Down on Chemical Use", description: "Discourage the use of hazardous chemicals, such as pesticides and fertilizers, which can pollute groundwater and other bodies of water." },
     { title: "Eat Locally", description: "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation." }
   ],
+  clients: [
+    { name: "AM/NS India Limited", image: "/fabrication/arcelormittal.jpg" },
+    { name: "Venus Wire Industries P. Ltd.", image: "/fabrication/venus.jpg" },
+    { name: "Amiad Filtration Systems (INDIA) P. Ltd.", image: "/fabrication/amiad.jpg" },
+    { name: "Technomax Enterprise (I) P Ltd.", image: "/fabrication/technomax.jpg" },
+    { name: "Hi-tech Radiators P. Ltd.", image: "/fabrication/hitech.jpg" },
+    { name: "Precision Metals", image: "/fabrication/precision.jpg" },
+    { name: "Jindal Industries P. Ltd.", image: "/fabrication/jindal.jpg" },
+    { name: "Yaha Water Systems", image: "/fabrication/yaha.jpg" }
+  ],
   sectors: [
     { title: "River Water", icon: "Waves" },
     { title: "Lake/Pond Water", icon: "Droplet" },

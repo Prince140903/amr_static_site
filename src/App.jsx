@@ -13,6 +13,7 @@ import {
 import { companyInfo } from './data';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
+import FabricationWorks from './pages/FabricationWorks';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -123,6 +124,7 @@ function Layout({ children }) {
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link to="/" className="text-sm font-semibold text-slate-900 hover:text-amr-orange transition">Home</Link>
+            <Link to="/fabrication_works" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Fabrication Works</Link>
             <Link to="/#about" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">About Us</Link>
             <Link to="/#objectives" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Water Treatment</Link>
 
@@ -251,6 +253,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/fabrication_works" element={<FabricationWorks />} />
         </Routes>
       </Layout>
     </Router>
