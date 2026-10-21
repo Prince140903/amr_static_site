@@ -23,13 +23,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { companyInfo } from "../data";
 import emailjs from "@emailjs/browser";
-import {
-  RiverWaterIcon,
-  LakeWaterIcon,
-  DamWaterIcon,
-  IndustrialWaterIcon,
-  SeaWaterIcon,
-} from "../components/SectorIcons";
+import StatsCounter from "../components/StatsCounter";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("engineering"); // project management tab
@@ -46,7 +40,8 @@ export default function Home() {
   const [captchaError, setCaptchaError] = useState(false);
   const [shakeKey, setShakeKey] = useState(0);
   const [expandedProducts, setExpandedProducts] = useState({});
-  const toggleProduct = id => setExpandedProducts(prev => ({ ...prev, [id]: !prev[id] }));
+  const toggleProduct = id =>
+    setExpandedProducts(prev => ({ ...prev, [id]: !prev[id] }));
 
   // Simple math captcha generation (prevents bots)
   const generateCaptcha = () => {
@@ -75,23 +70,6 @@ export default function Home() {
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       });
-    }
-  };
-
-  const getSectorIcon = iconName => {
-    switch (iconName) {
-      case "Waves":
-        return <RiverWaterIcon className="w-full h-full" />;
-      case "Droplet":
-        return <LakeWaterIcon className="w-full h-full" />;
-      case "Anchor":
-        return <DamWaterIcon className="w-full h-full" />;
-      case "Factory":
-        return <IndustrialWaterIcon className="w-full h-full" />;
-      case "Ship":
-        return <SeaWaterIcon className="w-full h-full" />;
-      default:
-        return <LakeWaterIcon className="w-full h-full" />;
     }
   };
 
@@ -187,21 +165,21 @@ export default function Home() {
         </div>
 
         {/* Left-aligned content */}
-        <div className="max-w-8xl mx-auto w-full relative z-10 ml-20">
+        <div className="max-w-8xl mx-auto w-full relative z-10 ml-0 sm:ml-6 lg:ml-20">
           <div className="max-w-3xl text-left space-y-4">
             <div className="inline-flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 text-xs font-semibold tracking-wide text-orange-300 uppercase shadow-inner drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
               <Award className="w-4 h-4" />
-              Over 16 Years of Engineering Precision
+              Over 20 Years of Engineering Precision
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
               Precision Engineering for the <br className="hidden md:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-amber-200 to-orange-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                 Future of Water Filtration
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-100 max-w-2xl font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <p className="text-base sm:text-lg md:text-xl text-slate-100 max-w-2xl font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               We address global water filtration challenges and honor our
               environmental responsibility through custom-engineered,
               high-performance systems.
@@ -229,7 +207,7 @@ export default function Home() {
       {/* About Us ("Get to Know Us") */}
       <section id="about" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
             {/* Visual Column */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
@@ -239,18 +217,18 @@ export default function Home() {
                   className="w-full object-cover aspect-[4/3] sm:aspect-square"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-amr-navy/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 right-6 bg-gradient-to-br from-amr-navy to-slate-900 border border-slate-800 text-white p-5 rounded-xl shadow-xl flex items-center gap-4">
-                  <div className="text-4xl font-extrabold text-amr-orange">
-                    16+
+                <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-br from-amr-navy to-slate-900 border border-slate-800 text-white p-4 sm:p-5 rounded-xl shadow-xl flex items-center gap-3 sm:gap-4">
+                  <div className="text-3xl sm:text-4xl font-extrabold text-amr-orange">
+                    20+
                   </div>
-                  <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">
                     Years of Combined
                     <br />
                     Expertise
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-orange-100 rounded-3xl -z-10"></div>
+              <div className="hidden sm:block absolute -top-6 -left-6 w-32 h-32 bg-orange-100 rounded-3xl -z-10"></div>
             </div>
 
             {/* Content Column */}
@@ -259,8 +237,8 @@ export default function Home() {
                 Get to Know Us
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                AMR Engineering Works – Your partner for customized industrial
-                and mechanical solutions
+                AMR Engineering Works – your reliable partner for water
+                filtration and other engineering solutions.
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 {companyInfo.aboutLong}
@@ -304,6 +282,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us + Stats Slab */}
+      <section id="why-choose-us" className="py-24 bg-slate-50 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+          <div className="text-center max-w-3xl mx-auto space-y-4 px-2">
+            <div className="text-2xl sm:text-3xl font-bold tracking-wide sm:tracking-widest text-amr-orange uppercase leading-tight">
+              Why Choose Us
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 items-start">
+            {companyInfo.whyChooseUs.map((item, i) => (
+              <div
+                key={i}
+                className="w-full h-full bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amr-orange/50 hover:shadow-lg transition-all duration-300 flex flex-row sm:flex-col items-start sm:items-center gap-4 sm:gap-0"
+              >
+                <div className="w-10 h-10 shrink-0 rounded-full bg-orange-50 flex items-center justify-center text-amr-orange sm:mb-4">
+                  <CheckCircle2 className="w-5 h-5" />
+                </div>
+                <h4 className="flex-1 sm:flex-none font-bold text-slate-900 text-sm leading-snug text-left sm:text-justify sm:w-full">
+                  {item}
+                </h4>
+              </div>
+            ))}
+          </div>
+
+          <StatsCounter stats={companyInfo.stats} />
+        </div>
+      </section>
+
       {/* New Sectors Section */}
       <section className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -312,45 +319,38 @@ export default function Home() {
               Applications
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Sectors We Serve
-            </h2>
-            <h6 className="text-lg sm:text-sm font-normal text-slate-900  leading-tight">
               Municipal / Irrigation/ Industrial
+            </h2>
+            <h6 className="text-base sm:text-sm font-normal text-slate-900 leading-tight px-2">
+              Sectors We Serve
             </h6>
           </div>
 
-          <div className="relative group">
-            {/* Slider Container */}
-            {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16 px-4">
-              {companyInfo.sectors.map((sector, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center text-center group"
+          <div className="relative group overflow-hidden">
+            {/* Sector Images Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+              {companyInfo.sectors.map(sector => (
+                <figure
+                  key={sector.title}
+                  className="group/sector flex flex-col items-center text-center"
                 >
-                  Icon area — same height for every sector
-                  <div className="w-full h-40 md:h-48 flex items-center justify-center mb-8">
-                    <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-                      {getSectorIcon(sector.icon)}
-                    </div>
+                  <div className="w-full aspect-[721/765] rounded-2xl overflow-hidden group-hover/sector:border-amr-orange/40 transition-all duration-300">
+                    <img
+                      src={encodeURI(sector.image)}
+                      alt={sector.title}
+                      width="721"
+                      height="765"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover/sector:scale-105 transition-transform duration-500"
+                    />
                   </div>
-
-                  Title area — same starting position
-                  <div className="min-h-[56px] flex items-start justify-center">
-                    <h3 className="text-lg md:text-xl font-extrabold text-amr-navy tracking-tight leading-tight">
-                      {sector.title}
-                    </h3>
-                  </div>
-                </div>
+                  <figcaption className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg font-extrabold text-amr-navy tracking-tight leading-tight">
+                    {sector.title}
+                  </figcaption>
+                </figure>
               ))}
-            </div> */}
-
-            <img
-              src="/assets/sectors.jpg"
-              alt="Sectors"
-              className="w-full h-full object-cover object-[65%_center] [transform:scaleX(1.05)]
-               sm:[transform:scaleX(1.1)]
-               md:[transform:scaleX(1.2)]"
-            />
+            </div>
           </div>
         </div>
       </section>
@@ -570,7 +570,7 @@ export default function Home() {
       {/* Contact Us Section */}
       <section id="contact" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-3">
                 <span className="text-xs font-bold tracking-widest text-amr-orange uppercase">

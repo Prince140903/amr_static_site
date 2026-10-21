@@ -46,7 +46,7 @@ export default function FabricationWorks() {
               AMR Engineering Works – Fabrication & Machining
             </h1>
             <p className="text-slate-600 leading-relaxed">
-              More than 16 years of machining & manufacturing expertise. AMR, an
+              More than 20 years of machining & manufacturing expertise. AMR, an
               Indian company, established in 2009. We assist customers by
               offering complete fabrication packages, which include metal
               bending and rolling, surface treatment, and CAD design and

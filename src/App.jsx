@@ -1,5 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import {
   Phone,
   Mail,
@@ -8,12 +14,12 @@ import {
   FileText,
   Menu,
   X,
-  Droplet
-} from 'lucide-react';
-import { companyInfo } from './data';
-import Home from './pages/Home';
-import ProductPage from './pages/ProductPage';
-import FabricationWorks from './pages/FabricationWorks';
+  Droplet,
+} from "lucide-react";
+import { companyInfo } from "./data";
+import Home from "./pages/Home";
+import ProductPage from "./pages/ProductPage";
+import FabricationWorks from "./pages/FabricationWorks";
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -30,7 +36,7 @@ function ScrollManager() {
         window.scrollTo(0, 0);
       } else {
         // Same page, hash cleared (e.g. clicking "Home").
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
       return;
     }
@@ -39,7 +45,7 @@ function ScrollManager() {
     // then scroll to the anchored section once it has rendered.
     if (pathChanged) window.scrollTo(0, 0);
 
-    const id = hash.replace('#', '');
+    const id = hash.replace("#", "");
     let attempts = 0;
     let cancelled = false;
 
@@ -47,7 +53,7 @@ function ScrollManager() {
       if (cancelled) return;
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
       } else if (attempts < 25) {
         // Element not mounted yet (Home still rendering) — retry shortly.
         attempts += 1;
@@ -72,7 +78,7 @@ function Layout({ children }) {
 
   // Placeholder links that don't have a destination page yet:
   // prevent the default "#" jump so the page never "sticks" at a bogus hash.
-  const handlePlaceholderClick = (e) => e.preventDefault();
+  const handlePlaceholderClick = e => e.preventDefault();
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -92,11 +98,17 @@ function Layout({ children }) {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <a href={`tel:${companyInfo.phone1.replace(/\s+/g, '')}`} className="flex items-center gap-1 text-slate-300 hover:text-white transition">
+            <a
+              href={`tel:${companyInfo.phone1.replace(/\s+/g, "")}`}
+              className="flex items-center gap-1 text-slate-300 hover:text-white transition"
+            >
               <Phone className="w-3 h-3 text-amr-orange" />
               {companyInfo.phone1}
             </a>
-            <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-1 text-slate-300 hover:text-white transition">
+            <a
+              href={`mailto:${companyInfo.email}`}
+              className="flex items-center gap-1 text-slate-300 hover:text-white transition"
+            >
               <Mail className="w-3 h-3 text-amr-orange" />
               {companyInfo.email}
             </a>
@@ -107,11 +119,14 @@ function Layout({ children }) {
       {/* Main Header / Navigation */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-
           {/* Logo Brand */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-40 h-20 flex items-center justify-center bg-white rounded-lg p-1 shadow-sm">
-              <img src="/assets/amr-web-logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
+              <img
+                src="/assets/amr-web-logo.png"
+                alt="AMR Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             {/* <div>
               <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-amr-orange transition-colors">
@@ -123,21 +138,53 @@ function Layout({ children }) {
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link to="/" className="text-sm font-semibold text-slate-900 hover:text-amr-orange transition">Home</Link>
-            <Link to="/fabrication_works" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Fabrication Works</Link>
-            <Link to="/#about" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">About Us</Link>
-            <Link to="/#objectives" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Water Treatment</Link>
+            <Link
+              to="/"
+              className="text-sm font-semibold text-slate-900 hover:text-amr-orange transition"
+            >
+              Home
+            </Link>
+            <Link
+              to="/#about"
+              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+            >
+              About Us
+            </Link>
+            {/* <Link
+              to="/#objectives"
+              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+            >
+              Water Treatment
+            </Link> */}
 
             <div className="relative group py-2">
-              <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">Products</span>
+              <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">
+                Filtration Technology
+              </span>
               <div className="absolute top-full left-0 w-48 bg-white border border-slate-200 shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                 {companyInfo.products.map(p => (
-                  <Link key={p.id} to={`/product/${p.id}`} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amr-orange">
+                  <Link
+                    key={p.id}
+                    to={`/product/${p.id}`}
+                    className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amr-orange"
+                  >
                     {p.brand}
                   </Link>
                 ))}
               </div>
             </div>
+            <Link
+              to="/fabrication_works"
+              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+            >
+              Other Works
+            </Link>
+            <Link
+              to="/#contact"
+              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+            >
+              Contact us
+            </Link>
 
             {/* <div className="relative group py-2">
               <span className="text-sm font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer">Operations</span>
@@ -155,26 +202,57 @@ function Layout({ children }) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation Panel */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-slate-100 bg-white px-4 py-6 space-y-3 shadow-inner">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-semibold text-slate-900 hover:bg-slate-50">Home</Link>
-            <Link to="/#about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About Us</Link>
-            <Link to="/#products" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Products & Services</Link>
-            <Link to="/#contact" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center px-3 py-3 rounded-md text-base font-medium text-white bg-amr-orange hover:bg-orange-600 shadow">
+            <Link
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-900 hover:bg-slate-50"
+            >
+              Home
+            </Link>
+            <Link
+              to="/#about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/#products"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50"
+            >
+              Filtration Technology
+            </Link>
+            <Link
+              to="/fabrication_works"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              Other works
+            </Link>
+            <Link
+              to="/#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-center px-3 py-3 rounded-md text-base font-medium text-white bg-amr-orange hover:bg-orange-600 shadow"
+            >
               Contact Us
             </Link>
           </div>
         )}
       </header>
 
-      <main className="flex-1">
-        {children}
-      </main>
+      <main className="flex-1">{children}</main>
 
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900 text-xs">
@@ -182,15 +260,17 @@ function Layout({ children }) {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-26 h-16 flex items-center justify-center rounded-lg p-1">
-                <img src="/assets/amr-web-logo.png" alt="AMR Logo" className="w-full h-full object-contain" />
+                <img
+                  src="/assets/amr-web-logo.png"
+                  alt="AMR Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               {/* <span className="text-base font-bold text-white tracking-tight">
                 AMR ENGINEERING
               </span> */}
             </div>
-            <p className="leading-relaxed">
-              {companyInfo.aboutShort}
-            </p>
+            <p className="leading-relaxed">{companyInfo.aboutShort}</p>
             <div className="flex gap-4">
               <span className="text-[10px] bg-slate-900 text-slate-300 font-bold border border-slate-800 px-2 py-1 rounded">
                 ISO 9001:2015
@@ -201,15 +281,47 @@ function Layout({ children }) {
             </div>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-white transition">Home</Link></li>
-              <li><Link to="/#about" className="hover:text-white transition">About Us</Link></li>
-              <li><Link to="/#products" className="hover:text-white transition">Products & Services</Link></li>
+              <li>
+                <Link to="/" className="hover:text-white transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/#about" className="hover:text-white transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/#products" className="hover:text-white transition">
+                  Filtration Technology
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/fabrication_works"
+                  className="hover:text-white transition"
+                >
+                  Other works
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#contact"
+                  className="hover:text-white transition"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact Info</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+              Contact Info
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amr-orange shrink-0 mt-0.5" />
@@ -226,19 +338,37 @@ function Layout({ children }) {
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">Support Hours</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+              Support Hours
+            </h4>
             <p className="leading-relaxed">
-              We provide persistent engineering supervision and round-the-clock O&M support to guarantee maximum system availability.
+              We provide persistent engineering supervision and round-the-clock
+              O&M support to guarantee maximum system availability.
             </p>
           </div>
         </div>
         <div className="border-t border-slate-900 max-w-7xl mx-auto my-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-600">
-          <p>© {new Date().getFullYear()} AMR Engineering Works. All Rights Reserved.</p>
+          <p>
+            © {new Date().getFullYear()} AMR Engineering Works. All Rights
+            Reserved.
+          </p>
           <div className="flex gap-4">
-            <a href="#" onClick={handlePlaceholderClick} className="hover:text-slate-400">Privacy Policy</a>
+            <a
+              href="#"
+              onClick={handlePlaceholderClick}
+              className="hover:text-slate-400"
+            >
+              Privacy Policy
+            </a>
             <span>•</span>
-            <a href="#" onClick={handlePlaceholderClick} className="hover:text-slate-400">Terms of Use</a>
+            <a
+              href="#"
+              onClick={handlePlaceholderClick}
+              className="hover:text-slate-400"
+            >
+              Terms of Use
+            </a>
           </div>
         </div>
       </footer>

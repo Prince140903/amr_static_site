@@ -10,7 +10,7 @@ export const companyInfo = {
   udyam: "MSME (UDYAM-MH-27-0132167)",
   iso: "ISO 9001:2015 Certified",
   aboutShort: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions.",
-  aboutLong: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions. Strategically operating out of Khopoli, Maharashtra, our dedicated team of qualified engineers and draftsmen brings over 16 years of specialized domain expertise to the water and wastewater sector. We custom-engineer high-performance systems designed to thrive in extreme conditions, ensuring successful and reliable applications across industrial, municipal, and agricultural markets.",
+  aboutLong: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions. Strategically operating out of Khopoli, Maharashtra, our dedicated team of qualified engineers and draftsmen brings over 20 years of specialized domain expertise to the water and wastewater sector. We custom-engineer high-performance systems designed to thrive in extreme conditions, ensuring successful and reliable applications across industrial, municipal, and agricultural markets.",
   aboutSecondary: "When you partner with us, you aren't just getting unparalleled filtration results—you are gaining a resilient, built-to-last solution backed by our unwavering 24/7 service support to keep your operations flowing seamlessly.",
   vision: "To become the global market leader by offering world-class products in Water Treatment and Filtration Technology and providing safe treated water under one roof.",
   coreValues: [
@@ -30,6 +30,24 @@ export const companyInfo = {
     { title: "Cut Down on Chemical Use", description: "Discourage the use of hazardous chemicals, such as pesticides and fertilizers, which can pollute groundwater and other bodies of water." },
     { title: "Eat Locally", description: "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation." }
   ],
+  whyChooseUs: [
+    "Water wastage less than 1%",
+    "Minimum space footprint",
+    "No chemicals required",
+    "Heavy load filtration",
+    "Overall filtration at micron level across all circuits",
+    "Dirt rejection at source, starting from river intake",
+    "Wide range of filtration - 0.01 microns up to 1500 microns",
+    "Automatic self-cleaning filtration systems",
+    "Consistent and long-lasting filtration, even during backwash",
+    "The best solution for poor quality water, raw water and sea water treatment applications in industry, irrigation and municipal sectors"
+  ],
+  stats: [
+    { value: 20, suffix: "+", label: "Years of Experience" },
+    { value: 10, suffix: "+", label: "Clients Served" },
+    { value: 4, suffix: "+", label: "Sectors Served" },
+    { value: 10, suffix: "+", label: "Plants Installed" }
+  ],
   clients: [
     { name: "AM/NS India Limited", image: "/fabrication/arcelormittal.jpg" },
     { name: "Venus Wire Industries P. Ltd.", image: "/fabrication/venus.jpg" },
@@ -41,11 +59,11 @@ export const companyInfo = {
     { name: "Yaha Water Systems", image: "/fabrication/yaha.jpg" }
   ],
   sectors: [
-    { title: "River Water", icon: "Waves" },
-    { title: "Lake/Pond Water", icon: "Droplet" },
-    { title: "Dam Water", icon: "Anchor" },
-    { title: "Industrial Water", icon: "Factory" },
-    { title: "Sea Water", icon: "Ship" }
+    { title: "River Water", icon: "Waves", image: "/assets/sectors/river water.png" },
+    { title: "Lake/Pond Water", icon: "Droplet", image: "/assets/sectors/lake & pond water.png" },
+    { title: "Dam Water", icon: "Anchor", image: "/assets/sectors/dam water.png" },
+    { title: "Industrial Water", icon: "Factory", image: "/assets/sectors/industrial water.png" },
+    { title: "Sea Water", icon: "Ship", image: "/assets/sectors/sea water.png" }
   ],
   commitments: [
     {
@@ -101,7 +119,7 @@ export const companyInfo = {
       category: "Screen Filters",
       brand: "FLOSAM",
       description: "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters.",
-      longDescription: "The FLOSAM Screen filters work well with inorganic or some organic matter such as large debris, leaves, algae, shrimps, silt and sand. They generally consist of a stainless-steel mesh that traps particles. Screen filters are generally cheaper to purchase than disc or media filters. Consists of heavy-duty automatic filters with an electric self-cleaning mechanism. Filtration Process: Raw water enters the inside of the screen cylinder from the filter's inlet and flows through the screen to the filter's outlet. The dirt particles are trapped on the inner screen surface and formulate a \"filtration cake\" that causes a differential pressure across the screen. Self cleaning Process: During the self-cleaning process, filtered process water continues to flow. The Exhaust valve opens, and the Drive unit rotates two stainless steel brushes which sweep the inner surface of the cylindrical screen. The particles trapped on the screen are dislodged by the brushes and flushed out the exhaust valve. Control System: The control system is comprised of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a pre-defined value (usually 0.5 bar / 7 psi). The control board initiates the self-cleaning process. The filter begins a self-cleaning cycle under any one of the following conditions: 1. Receiving a signal from the Pressure Differential Switch 2. Time interval parameter set at the control board 3. Manual start. Advantages: 1. Minimum head loss 2. Online filtration i.e. filtration does not stop irrespective of the backwash 3. Less waste of water (< 1% of total flow) 4. Reduced footprint area 5. Energy saving as there is no pump required for backwash 6. Largest filtration area for each filter 7. 100% Uniform cleaning 8. Performance guarantee on the outlet water quality.",
+      longDescription: "FLOSAM Screen filters are suitable for inorganic and some organic contaminants such as large debris, leaves, algae, shrimps, silt and sand. They generally consist of a stainless-steel mesh that traps particles. Screen filters are generally cheaper to purchase than disc or media filters. FLOSAM filters consist of heavy-duty automatic filters with an electric self-cleaning mechanism.\n\nFILTRATION PROCESS\n\nRaw water enters the inside of the cylindrical screen through the filter inlet and flows through the screen to the filter outlet. Dirt particles are trapped on the inner screen surface and form a \"filtration cake,\" which creates a differential pressure across the screen.\n\nSELF-CLEANING PROCESS\n\nDuring the self-cleaning process, filtered process water continues to flow without interruption. The exhaust valve opens, and the drive unit rotates two stainless-steel brushes that sweep the inner surface of the cylindrical screen. The particles trapped on the screen are dislodged by the brushes and flushed out through the exhaust valve.\n\nCONTROL SYSTEM\n\nThe control system consists of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a predefined value (usually 0.5 bar / 7 psi). The control board then initiates the self-cleaning process.\n\nThe filter begins a self-cleaning cycle under any one of the following conditions:\n\n1. Receiving a signal from the Pressure Differential Switch.\n2. Reaching the time interval parameter set at the control board.\n3. Manual start.\n\nPERFORMANCE AND BENEFITS\n\nFLOSAM Screen filters offer the following advantages:\n\n1. Minimum head loss.\n2. Online filtration, i.e., filtration does not stop during the backwash process.\n3. Less water wastage (less than 1% of total flow).\n4. Reduced footprint area.\n5. Energy savings, as no pump is required for backwashing.\n6. Largest filtration area for each filter.\n7. 100% uniform cleaning.\n8. Performance guarantee on outlet water quality.",
       image: "/assets/Products/flosam1.jpg",
       images: [
         "/assets/Products/flosam1.jpg",
