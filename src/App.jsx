@@ -17,6 +17,7 @@ import {
   Droplet,
 } from "lucide-react";
 import { companyInfo } from "./data";
+import DocModal from "./components/DocModal";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import FabricationWorks from "./pages/FabricationWorks";
@@ -75,11 +76,8 @@ function ScrollManager() {
 
 function Layout({ children }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Placeholder links that don't have a destination page yet:
-  // prevent the default "#" jump so the page never "sticks" at a bogus hash.
+  const [docModal, setDocModal] = useState(null);
   const handlePlaceholderClick = e => e.preventDefault();
-
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <ScrollManager />
@@ -309,10 +307,7 @@ function Layout({ children }) {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/#contact"
-                  className="hover:text-white transition"
-                >
+                <Link to="/#contact" className="hover:text-white transition">
                   Contact Us
                 </Link>
               </li>
@@ -335,6 +330,10 @@ function Layout({ children }) {
                 <Mail className="w-4 h-4 text-amr-orange shrink-0" />
                 <span>{companyInfo.email}</span>
               </li>
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-amr-orange shrink-0" />
+                <span>{companyInfo.sales_email}</span>
+              </li>
             </ul>
           </div>
           <div className="space-y-4">
@@ -354,24 +353,17 @@ function Layout({ children }) {
             Reserved.
           </p>
           <div className="flex gap-4">
-            <a
-              href="#"
-              onClick={handlePlaceholderClick}
-              className="hover:text-slate-400"
-            >
+            <button onClick={() => setDocModal('Privacy Policy')} className="hover:text-slate-400">
               Privacy Policy
-            </a>
+            </button>
             <span>•</span>
-            <a
-              href="#"
-              onClick={handlePlaceholderClick}
-              className="hover:text-slate-400"
-            >
+            <button onClick={() => setDocModal('Terms of Use')} className="hover:text-slate-400">
               Terms of Use
-            </a>
+            </button>
           </div>
         </div>
       </footer>
+      <DocModal open={!!docModal} title={docModal} onClose={() => setDocModal(null)} />
     </div>
   );
 }

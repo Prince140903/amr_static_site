@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Droplet, Settings, Shield, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { companyInfo } from '../data';
 
 export default function ProductPage() {
@@ -27,6 +27,9 @@ const [expanded, setExpanded] = useState(false);
     ? product.images
     : [product.image].filter(Boolean);
   const currentImage = galleryImages[activeImage] || product.image;
+
+  const benefits = product.keyBenefits || [];
+  const features = product.features || [];
 
   return (
     <div className="bg-slate-50 min-h-screen py-12">
@@ -114,18 +117,12 @@ const [expanded, setExpanded] = useState(false);
                 <div className="pt-6 border-t border-slate-100">
                   <h3 className="text-lg font-bold text-slate-900 mb-4">Key Benefits</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                      <span className="text-slate-700 text-sm">High-efficiency particulate removal optimized for industrial processes.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                      <span className="text-slate-700 text-sm">Built with durable, corrosion-resistant materials for extended operational lifespan.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                      <span className="text-slate-700 text-sm">Compliant with stringent environmental and safety standards.</span>
-                    </li>
+                    {benefits.map((b, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                        <span className="text-slate-700 text-sm">{b}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
@@ -144,29 +141,16 @@ const [expanded, setExpanded] = useState(false);
         </div>
 
         {/* Technical Specs / Features Section */}
+        {features.length > 0 && (
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 mb-5">
-              <Settings className="w-6 h-6" />
+          {features.map((f, i) => (
+            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">{f.title}</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">{f.description}</p>
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">Automated Operations</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">Integrated smart controllers enable minimal manual intervention and optimize backwash cycles based on real-time pressure differential data.</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-amr-orange mb-5">
-              <Droplet className="w-6 h-6" />
-            </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">High Throughput</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">Designed for maximum flow rates with minimal head loss, ensuring that large volumes of fluid are processed quickly and efficiently.</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-5">
-              <Shield className="w-6 h-6" />
-            </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">Reliable Performance</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">Engineered using industrial-grade materials to withstand harsh operating conditions and corrosive fluid environments over decades of use.</p>
-          </div>
+          ))}
         </div>
+        )}
 
       </div>
     </div>
