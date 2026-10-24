@@ -318,7 +318,7 @@ export default function Home() {
             <div className="text-xs font-bold tracking-widest text-amr-orange uppercase">
               Applications
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
               Municipal / Irrigation/ Industrial
             </h2>
             <h6 className="text-base sm:text-sm font-normal text-slate-900 leading-tight px-2">
@@ -334,7 +334,7 @@ export default function Home() {
                   key={sector.title}
                   className="group/sector flex flex-col items-center text-center"
                 >
-                  <div className="w-full aspect-[721/765] rounded-2xl overflow-hidden group-hover/sector:border-amr-orange/40 transition-all duration-300">
+                  <div className="w-full max-w-[180px] mx-auto aspect-[721/765] rounded-2xl overflow-hidden group-hover/sector:border-amr-orange/40 transition-all duration-300">
                     <img
                       src={encodeURI(sector.image)}
                       alt={sector.title}
