@@ -319,7 +319,7 @@ export default function Home() {
               Applications
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-              Municipal / Irrigation/ Industrial
+              Municipal | Irrigation | Industrial
             </h2>
             <h6 className="text-base sm:text-sm font-normal text-slate-900 leading-tight px-2">
               Sectors We Serve
