@@ -298,10 +298,10 @@ export default function Home() {
                 className="w-full h-full bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amr-orange/50 hover:shadow-lg transition-all duration-300 flex flex-row sm:flex-col items-start sm:items-center gap-4 sm:gap-0"
               >
                 <div className="w-10 h-10 shrink-0 rounded-full bg-orange-50 flex items-center justify-center text-amr-orange sm:mb-4">
-                  <CheckCircle2 className="w-5 h-5" />
+                  <img src={item.image} alt="img" />
                 </div>
                 <h4 className="flex-1 sm:flex-none font-bold text-slate-900 text-sm leading-snug text-left sm:text-justify sm:w-full">
-                  {item}
+                  {item.title}
                 </h4>
               </div>
             ))}

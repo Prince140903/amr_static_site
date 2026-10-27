@@ -3,86 +3,205 @@ export const companyInfo = {
   tagline: "Precision Engineering for the Future of Water Filtration",
   established: 2009,
   location: "Khopoli, Maharashtra",
-  address: "Opp. Vishal Traders, Sajgoan, Post Dheku, Khopoli, Raigad, Maharashtra 410203",
+  address:
+    "Opp. Vishal Traders, Sajgoan, Post Dheku, Khopoli, Raigad, Maharashtra 410203",
   phone1: "+91 97626 66660",
   // phone2: "+91 90280 76586",
   email: "info@amrengg.net",
   sales_email: "sales@amrengg.net",
   udyam: "MSME (UDYAM-MH-27-0132167)",
   iso: "ISO 9001:2015 Certified",
-  aboutShort: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions.",
-  aboutLong: "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions. Strategically operating out of Khopoli, Maharashtra, our dedicated team of qualified engineers and draftsmen brings over 20 years of specialized domain expertise to the water and wastewater sector. We custom-engineer high-performance systems designed to thrive in extreme conditions, ensuring successful and reliable applications across industrial, municipal, and agricultural markets.",
-  aboutSecondary: "When you partner with us, you aren't just getting unparalleled filtration results—you are gaining a resilient, built-to-last solution backed by our unwavering 24/7 service support to keep your operations flowing seamlessly.",
-  vision: "To become the global market leader by offering world-class products in Water Treatment and Filtration Technology and providing safe treated water under one roof.",
+  aboutShort:
+    "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions.",
+  aboutLong:
+    "Since our establishment in 2009, AMR Engineering Works has been a trusted industry leader in advanced water filtration technology and comprehensive engineering solutions. Strategically operating out of Khopoli, Maharashtra, our dedicated team of qualified engineers and draftsmen brings over 20 years of specialized domain expertise to the water and wastewater sector. We custom-engineer high-performance systems designed to thrive in extreme conditions, ensuring successful and reliable applications across industrial, municipal, and agricultural markets.",
+  aboutSecondary:
+    "When you partner with us, you aren't just getting unparalleled filtration results—you are gaining a resilient, built-to-last solution backed by our unwavering 24/7 service support to keep your operations flowing seamlessly.",
+  vision:
+    "To become the global market leader by offering world-class products in Water Treatment and Filtration Technology and providing safe treated water under one roof.",
   coreValues: [
-    { title: "Safety", description: "Ensuring the safety of all personnel, customers, and the environment through the use of proper safety protocols and the latest technology." },
-    { title: "Quality", description: "Providing the highest quality water treatment services and products to our customers." },
-    { title: "Innovation", description: "Adopting the latest technologies and processes to ensure efficient and effective water treatment solutions." },
-    { title: "Reliability", description: "Delivering reliable and consistent services to our customers every time." },
-    { title: "Integrity", description: "Maintaining the highest ethical standards in our dealings to ensure trust and transparency." },
-    { title: "Sustainability", description: "Developing technologies and processes that protect the environment and promote sustainability." }
+    {
+      title: "Safety",
+      description:
+        "Ensuring the safety of all personnel, customers, and the environment through the use of proper safety protocols and the latest technology.",
+    },
+    {
+      title: "Quality",
+      description:
+        "Providing the highest quality water treatment services and products to our customers.",
+    },
+    {
+      title: "Innovation",
+      description:
+        "Adopting the latest technologies and processes to ensure efficient and effective water treatment solutions.",
+    },
+    {
+      title: "Reliability",
+      description:
+        "Delivering reliable and consistent services to our customers every time.",
+    },
+    {
+      title: "Integrity",
+      description:
+        "Maintaining the highest ethical standards in our dealings to ensure trust and transparency.",
+    },
+    {
+      title: "Sustainability",
+      description:
+        "Developing technologies and processes that protect the environment and promote sustainability.",
+    },
   ],
   environmentSteps: [
-    { title: "Reduce, reuse, and recycle", description: "Encourage people to reduce the amount of waste they generate, reuse items when possible, and recycle as much as possible." },
-    { title: "Plant Trees", description: "Planting trees is one of the best ways to reduce environmental damage. Trees absorb carbon dioxide, a major greenhouse gas, and other pollutants while releasing oxygen into the atmosphere." },
-    { title: "Conserve Energy", description: "Educate people on ways to conserve energy, such as turning off lights when they aren't needed, using energy-efficient appliances, and unplugging electronics when they aren't in use." },
-    { title: "Use Renewable Energy Sources", description: "Encourage the use of renewable energy sources, such as solar and wind energy, which don't rely on finite resources and are much more eco-friendly." },
-    { title: "Reduce Water Usage", description: "Educate people about ways to reduce water usage, such as taking shorter showers, using low-flow faucets and toilets, and fixing leaky pipes." },
-    { title: "Cut Down on Chemical Use", description: "Discourage the use of hazardous chemicals, such as pesticides and fertilizers, which can pollute groundwater and other bodies of water." },
-    { title: "Eat Locally", description: "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation." }
+    {
+      title: "Reduce, reuse, and recycle",
+      description:
+        "Encourage people to reduce the amount of waste they generate, reuse items when possible, and recycle as much as possible.",
+    },
+    {
+      title: "Plant Trees",
+      description:
+        "Planting trees is one of the best ways to reduce environmental damage. Trees absorb carbon dioxide, a major greenhouse gas, and other pollutants while releasing oxygen into the atmosphere.",
+    },
+    {
+      title: "Conserve Energy",
+      description:
+        "Educate people on ways to conserve energy, such as turning off lights when they aren't needed, using energy-efficient appliances, and unplugging electronics when they aren't in use.",
+    },
+    {
+      title: "Use Renewable Energy Sources",
+      description:
+        "Encourage the use of renewable energy sources, such as solar and wind energy, which don't rely on finite resources and are much more eco-friendly.",
+    },
+    {
+      title: "Reduce Water Usage",
+      description:
+        "Educate people about ways to reduce water usage, such as taking shorter showers, using low-flow faucets and toilets, and fixing leaky pipes.",
+    },
+    {
+      title: "Cut Down on Chemical Use",
+      description:
+        "Discourage the use of hazardous chemicals, such as pesticides and fertilizers, which can pollute groundwater and other bodies of water.",
+    },
+    {
+      title: "Eat Locally",
+      description:
+        "Encourage people to eat locally sourced food to reduce the carbon footprint associated with transportation.",
+    },
   ],
   whyChooseUs: [
-    "Water wastage less than 1%",
-    "Minimum space footprint",
-    "No chemicals required",
-    "Heavy load filtration",
-    "Overall filtration at micron level across all circuits",
-    "Dirt rejection at source, starting from river intake",
-    "Wide range of filtration - 0.01 microns up to 1500 microns",
-    "Automatic self-cleaning filtration systems",
-    "Consistent and long-lasting filtration, even during backwash",
-    "The best solution for poor quality water, raw water and sea water treatment applications in industry, irrigation and municipal sectors"
+    {
+      title: "Water wastage less than 1%",
+      image: "/assets/why/1.png",
+    },
+    {
+      title: "Minimum space footprint",
+      image: "/assets/why/2.png",
+    },
+    {
+      title: "No chemicals required",
+      image: "/assets/why/3.png",
+    },
+    {
+      title: "Heavy load filtration",
+      image: "/assets/why/4.png",
+    },
+    {
+      title: "Overall filtration at micron level across all circuits",
+      image: "/assets/why/5.png",
+    },
+    {
+      title: "Dirt rejection at source, starting from river intake",
+      image: "/assets/why/6.png",
+    },
+    {
+      title: "Wide range of filtration - 0.01 microns up to 1500 microns",
+      image: "/assets/why/7.png",
+    },
+    {
+      title: "Automatic self-cleaning filtration systems",
+      image: "/assets/why/8.png",
+    },
+    {
+      title: "Consistent and long-lasting filtration, even during backwash",
+      image: "/assets/why/9.png",
+    },
+    {
+      title:
+        "The best solution for poor quality water, raw water and sea water treatment applications in industry, irrigation and municipal sectors",
+      image: "/assets/why/10.png",
+    },
   ],
   stats: [
     { value: 20, suffix: "+", label: "Years of Experience" },
     { value: 10, suffix: "+", label: "Clients Served" },
     { value: 4, suffix: "+", label: "Sectors Served" },
-    { value: 10, suffix: "+", label: "Plants Installed" }
+    { value: 10, suffix: "+", label: "Plants Installed" },
   ],
   clients: [
     { name: "AM/NS India Limited", image: "/fabrication/arcelormittal.jpg" },
     { name: "Venus Wire Industries P. Ltd.", image: "/fabrication/venus.jpg" },
-    { name: "Amiad Filtration Systems (INDIA) P. Ltd.", image: "/fabrication/amiad.jpg" },
-    { name: "Technomax Enterprise (I) P Ltd.", image: "/fabrication/technomax.jpg" },
+    {
+      name: "Amiad Filtration Systems (INDIA) P. Ltd.",
+      image: "/fabrication/amiad.jpg",
+    },
+    {
+      name: "Technomax Enterprise (I) P Ltd.",
+      image: "/fabrication/technomax.jpg",
+    },
     { name: "Hi-tech Radiators P. Ltd.", image: "/fabrication/hitech.jpg" },
     { name: "Precision Metals", image: "/fabrication/precision.jpg" },
     { name: "Jindal Industries P. Ltd.", image: "/fabrication/jindal.jpg" },
-    { name: "Yaha Water Systems", image: "/fabrication/yaha.jpg" }
+    { name: "Yaha Water Systems", image: "/fabrication/yaha.jpg" },
   ],
   sectors: [
-    { title: "River Water", icon: "Waves", image: "/assets/sectors/river water.png" },
-    { title: "Lake/Pond Water", icon: "Droplet", image: "/assets/sectors/lake & pond water.png" },
-    { title: "Dam Water", icon: "Anchor", image: "/assets/sectors/dam water.png" },
-    { title: "Industrial Water", icon: "Factory", image: "/assets/sectors/industrial water.png" },
-    { title: "Sea Water", icon: "Ship", image: "/assets/sectors/sea water.png" }
+    {
+      title: "River Water",
+      icon: "Waves",
+      image: "/assets/sectors/river water.png",
+    },
+    {
+      title: "Lake/Pond Water",
+      icon: "Droplet",
+      image: "/assets/sectors/lake & pond water.png",
+    },
+    {
+      title: "Dam Water",
+      icon: "Anchor",
+      image: "/assets/sectors/dam water.png",
+    },
+    {
+      title: "Industrial Water",
+      icon: "Factory",
+      image: "/assets/sectors/industrial water.png",
+    },
+    {
+      title: "Sea Water",
+      icon: "Ship",
+      image: "/assets/sectors/sea water.png",
+    },
   ],
   commitments: [
     {
       title: "Sustained Development",
-      description: "This has been the driving mantra for AMR ENGINEERING WORKS right from its inception."
+      description:
+        "This has been the driving mantra for AMR ENGINEERING WORKS right from its inception.",
     },
     {
       title: "Environmental Responsibility",
-      description: "Sustainability is a core part of our daily work routines, ensuring we meet our responsibility to protect the environment."
+      description:
+        "Sustainability is a core part of our daily work routines, ensuring we meet our responsibility to protect the environment.",
     },
     {
       title: "Innovation & Growth",
-      description: "We firmly believe everlasting success is achieved through innovations that increase our contribution to overcoming global water challenges while promoting the growth of our clients."
-    }
+      description:
+        "We firmly believe everlasting success is achieved through innovations that increase our contribution to overcoming global water challenges while promoting the growth of our clients.",
+    },
   ],
   qualityPolicy: {
-    statement1: "Quality is not merely a system for us, but a culture that spans the length and breadth of our organization.",
-    statement2: "We believe that our objectives and our clients' objectives are only fully met when we deliver premium quality services."
+    statement1:
+      "Quality is not merely a system for us, but a culture that spans the length and breadth of our organization.",
+    statement2:
+      "We believe that our objectives and our clients' objectives are only fully met when we deliver premium quality services.",
   },
   waterTreatmentObjectives: [
     "To remove color and odor from the water supply.",
@@ -90,37 +209,44 @@ export const companyInfo = {
     "To remove harmful microbes that cause waterborne diseases.",
     "To reduce murkiness and turbidity.",
     "To extract dissolved gases present in the water.",
-    "To make water entirely suitable for drinking, industrial use, and other demands."
+    "To make water entirely suitable for drinking, industrial use, and other demands.",
   ],
   projectManagementLifecycle: [
     {
       phase: "Engineering",
-      description: "Includes the design and planning of projects, detailed design of mechanical components, interface definition, and technical specifications."
+      description:
+        "Includes the design and planning of projects, detailed design of mechanical components, interface definition, and technical specifications.",
     },
     {
       phase: "Procurement",
-      description: "Encompasses supplier evaluation, manufacturing inspection, and leveraging long-term relationships with key partners."
+      description:
+        "Encompasses supplier evaluation, manufacturing inspection, and leveraging long-term relationships with key partners.",
     },
     {
       phase: "Construction",
-      description: "Driven by lead engineering functions, the erection of electromechanical systems, and control of key plant construction milestones."
+      description:
+        "Driven by lead engineering functions, the erection of electromechanical systems, and control of key plant construction milestones.",
     },
     {
       phase: "Commissioning",
-      description: "Covers the complete installation and testing of our products, backed by field site engineers and supervisors."
+      description:
+        "Covers the complete installation and testing of our products, backed by field site engineers and supervisors.",
     },
     {
       phase: "Operations & Maintenance",
-      description: "Includes start-up, test runs, and yearly O&M provisions utilizing deep process knowledge of complex system interactions."
-    }
+      description:
+        "Includes start-up, test runs, and yearly O&M provisions utilizing deep process knowledge of complex system interactions.",
+    },
   ],
   products: [
     {
       id: "flosam",
       category: "Screen Filters",
       brand: "FLOSAM",
-      description: "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters.",
-      longDescription: "FLOSAM Screen filters are suitable for inorganic and some organic contaminants such as large debris, leaves, algae, shrimps, silt and sand. They generally consist of a stainless-steel mesh that traps particles. Screen filters are generally cheaper to purchase than disc or media filters. FLOSAM filters consist of heavy-duty automatic filters with an electric self-cleaning mechanism.\n\nFILTRATION PROCESS\n\nRaw water enters the inside of the cylindrical screen through the filter inlet and flows through the screen to the filter outlet. Dirt particles are trapped on the inner screen surface and form a \"filtration cake,\" which creates a differential pressure across the screen.\n\nSELF-CLEANING PROCESS\n\nDuring the self-cleaning process, filtered process water continues to flow without interruption. The exhaust valve opens, and the drive unit rotates two stainless-steel brushes that sweep the inner surface of the cylindrical screen. The particles trapped on the screen are dislodged by the brushes and flushed out through the exhaust valve.\n\nCONTROL SYSTEM\n\nThe control system consists of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a predefined value (usually 0.5 bar / 7 psi). The control board then initiates the self-cleaning process.\n\nThe filter begins a self-cleaning cycle under any one of the following conditions:\n\n1. Receiving a signal from the Pressure Differential Switch.\n2. Reaching the time interval parameter set at the control board.\n3. Manual start.\n\nPERFORMANCE AND BENEFITS\n\nFLOSAM Screen filters offer the following advantages:\n\n1. Minimum head loss.\n2. Online filtration, i.e., filtration does not stop during the backwash process.\n3. Less water wastage (less than 1% of total flow).\n4. Reduced footprint area.\n5. Energy savings, as no pump is required for backwashing.\n6. Largest filtration area for each filter.\n7. 100% uniform cleaning.\n8. Performance guarantee on outlet water quality.",
+      description:
+        "Traps inorganic matter like silt and sand using a fine stainless-steel mesh; generally more cost-effective than disc or media filters.",
+      longDescription:
+        'FLOSAM Screen filters are suitable for inorganic and some organic contaminants such as large debris, leaves, algae, shrimps, silt and sand. They generally consist of a stainless-steel mesh that traps particles. Screen filters are generally cheaper to purchase than disc or media filters. FLOSAM filters consist of heavy-duty automatic filters with an electric self-cleaning mechanism.\n\nFILTRATION PROCESS\n\nRaw water enters the inside of the cylindrical screen through the filter inlet and flows through the screen to the filter outlet. Dirt particles are trapped on the inner screen surface and form a "filtration cake," which creates a differential pressure across the screen.\n\nSELF-CLEANING PROCESS\n\nDuring the self-cleaning process, filtered process water continues to flow without interruption. The exhaust valve opens, and the drive unit rotates two stainless-steel brushes that sweep the inner surface of the cylindrical screen. The particles trapped on the screen are dislodged by the brushes and flushed out through the exhaust valve.\n\nCONTROL SYSTEM\n\nThe control system consists of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a predefined value (usually 0.5 bar / 7 psi). The control board then initiates the self-cleaning process.\n\nThe filter begins a self-cleaning cycle under any one of the following conditions:\n\n1. Receiving a signal from the Pressure Differential Switch.\n2. Reaching the time interval parameter set at the control board.\n3. Manual start.\n\nPERFORMANCE AND BENEFITS\n\nFLOSAM Screen filters offer the following advantages:\n\n1. Minimum head loss.\n2. Online filtration, i.e., filtration does not stop during the backwash process.\n3. Less water wastage (less than 1% of total flow).\n4. Reduced footprint area.\n5. Energy savings, as no pump is required for backwashing.\n6. Largest filtration area for each filter.\n7. 100% uniform cleaning.\n8. Performance guarantee on outlet water quality.',
       keyBenefits: [
         "Automatic Self-Cleaning",
         "Pressure Differential/timer based flushing cycle",
@@ -131,12 +257,24 @@ export const companyInfo = {
         "Wide range of filtration",
         "Built for 150 microns to 1000 microns",
         "Ideal for various applications",
-        "The best solution for poor-quality water filtration"
+        "The best solution for poor-quality water filtration",
       ],
       features: [
-        { title: "FILTRATION PROCESS", description: "Raw water enters the inside of the cylindrical screen through the filter inlet and flows through the screen to the filter outlet. Dirt particles are trapped on the inner screen surface and form a \"filtration cake,\" which creates a differential pressure across the screen." },
-        { title: "SELF-CLEANING PROCESS", description: "During the self-cleaning process, filtered process water continues to flow without interruption. The exhaust valve opens, and the drive unit rotates two stainless-steel brushes that sweep the inner surface of the cylindrical screen." },
-        { title: "CONTROL SYSTEM", description: "The control system consists of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a predefined value (usually 0.5 bar / 7 psi)." }
+        {
+          title: "FILTRATION PROCESS",
+          description:
+            'Raw water enters the inside of the cylindrical screen through the filter inlet and flows through the screen to the filter outlet. Dirt particles are trapped on the inner screen surface and form a "filtration cake," which creates a differential pressure across the screen.',
+        },
+        {
+          title: "SELF-CLEANING PROCESS",
+          description:
+            "During the self-cleaning process, filtered process water continues to flow without interruption. The exhaust valve opens, and the drive unit rotates two stainless-steel brushes that sweep the inner surface of the cylindrical screen.",
+        },
+        {
+          title: "CONTROL SYSTEM",
+          description:
+            "The control system consists of a Pressure Differential Switch that senses the pressure differential across the screen and sends a signal to the control board when it reaches a predefined value (usually 0.5 bar / 7 psi).",
+        },
       ],
       image: "/assets/Products/flosam1.jpg",
       images: [
@@ -145,14 +283,16 @@ export const companyInfo = {
         "/assets/Products/flosam3.jpg",
         "/assets/Products/flosam4.jpg",
         // "/assets/Products/flosam5.jpg"
-      ]
+      ],
     },
     {
       id: "aqualife",
       category: "Media Filters",
       brand: "AQUALIFE",
-      description: "Suitable for organic and inorganic contaminants; utilizes tanks filled with glass, sand, or gravel, cleaned by reversing the water flow.",
-      longDescription: "AQUALIFE Media filters are suitable for both inorganic and organic contaminants. They are tanks filled with activated glass media, sand or gravel media. Water passes through the bed of media and particles are trapped. Media filters offer a much bigger surface area and as such can usually provide more effective filtration.\n\nCLEANING PROCESS\nCleaning is achieved by reversing the flow of water through the tank to lift and separate the glass or sand. Trapped contaminants are purged to waste as the water flows through.\n\nACTIVATED GLASS MEDIA\nIn AQUALIFE filters we use advance activated glass media for best performance and life long solution. The active glass media is made from crushed green glass & hydraulically optimized in terms of grain shape & size to enhance performance.\n\nTECHNICAL DETAILS\n• The surface area of glass media is 10,00,000 m2/m3 & it is 300 times of the sand surface area.\n• The zeta potential of glass media is > -70mV & for sand -10mV to -30mV.\n• Under typical environmental and water treatment conditions (pH 5-9), the media surfaces are negatively charged, which creates a barrier to removing negatively charged particles, bacteria, and organic matter.\n\nPERFORMANCE AND BENEFITS\nThe activated glass media is eco-friendly & sustainable solution with high performance like 80% removal of all particles in the water down to 4.5 microns. The activated glass media removes organic & inorganic impurities. Some BOD & COD reduction also done. The best part of this glass media is no formation of Bio-film, no mud ball formation so no need to replace the glass media for minimum 10 years.",
+      description:
+        "Suitable for organic and inorganic contaminants; utilizes tanks filled with glass, sand, or gravel, cleaned by reversing the water flow.",
+      longDescription:
+        "AQUALIFE Media filters are suitable for both inorganic and organic contaminants. They are tanks filled with activated glass media, sand or gravel media. Water passes through the bed of media and particles are trapped. Media filters offer a much bigger surface area and as such can usually provide more effective filtration.\n\nCLEANING PROCESS\nCleaning is achieved by reversing the flow of water through the tank to lift and separate the glass or sand. Trapped contaminants are purged to waste as the water flows through.\n\nACTIVATED GLASS MEDIA\nIn AQUALIFE filters we use advance activated glass media for best performance and life long solution. The active glass media is made from crushed green glass & hydraulically optimized in terms of grain shape & size to enhance performance.\n\nTECHNICAL DETAILS\n• The surface area of glass media is 10,00,000 m2/m3 & it is 300 times of the sand surface area.\n• The zeta potential of glass media is > -70mV & for sand -10mV to -30mV.\n• Under typical environmental and water treatment conditions (pH 5-9), the media surfaces are negatively charged, which creates a barrier to removing negatively charged particles, bacteria, and organic matter.\n\nPERFORMANCE AND BENEFITS\nThe activated glass media is eco-friendly & sustainable solution with high performance like 80% removal of all particles in the water down to 4.5 microns. The activated glass media removes organic & inorganic impurities. Some BOD & COD reduction also done. The best part of this glass media is no formation of Bio-film, no mud ball formation so no need to replace the glass media for minimum 10 years.",
       keyBenefits: [
         "80% removal of all particles down to 4.5 microns",
         "Removes organic & inorganic impurities",
@@ -160,97 +300,162 @@ export const companyInfo = {
         "No bio-film formation",
         "No mud ball formation",
         "No need to replace glass media for minimum 10 years",
-        "Eco-friendly & sustainable solution"
+        "Eco-friendly & sustainable solution",
       ],
       features: [
-        { title: "CLEANING PROCESS", description: "Cleaning is achieved by reversing the flow of water through the tank to lift and separate the glass or sand. Trapped contaminants are purged to waste as the water flows through." },
-        { title: "ACTIVATED GLASS MEDIA", description: "In AQUALIFE filters we use advance activated glass media for best performance and life long solution. The active glass media is made from crushed green glass & hydraulically optimized in terms of grain shape & size to enhance performance." },
-        { title: "TECHNICAL DETAILS", description: "The surface area of glass media is 10,00,000 m2/m3 & it is 300 times of the sand surface area. The zeta potential of glass media is > -70mV & for sand -10mV to -30mV." }
+        {
+          title: "CLEANING PROCESS",
+          description:
+            "Cleaning is achieved by reversing the flow of water through the tank to lift and separate the glass or sand. Trapped contaminants are purged to waste as the water flows through.",
+        },
+        {
+          title: "ACTIVATED GLASS MEDIA",
+          description:
+            "In AQUALIFE filters we use advance activated glass media for best performance and life long solution. The active glass media is made from crushed green glass & hydraulically optimized in terms of grain shape & size to enhance performance.",
+        },
+        {
+          title: "TECHNICAL DETAILS",
+          description:
+            "The surface area of glass media is 10,00,000 m2/m3 & it is 300 times of the sand surface area. The zeta potential of glass media is > -70mV & for sand -10mV to -30mV.",
+        },
       ],
-      image: "/assets/Products/aqualife.jpg"
+      image: "/assets/Products/aqualife.jpg",
     },
     {
       id: "coallife",
       category: "Carbon Filters",
       brand: "COALLIFE",
-      description: "Uses highly porous activated carbon to remove impurities, volatile organic compounds (VOCs), chemicals like chlorine, gases, and odors via adsorption.",
-      longDescription: "COALLIFE carbon filter is a purification device that uses activated carbon to remove impurities and contaminants from water or air through a process called adsorption.\n\nFILTRATION PROCESS\nThese highly porous filters trap particles, chemicals (like chlorine), volatile organic compounds (VOCs), Odors, and gases. They are commonly used in water purification.\n\nACTIVATED CARBON MEDIA\nIn COALLIFE filters we use advance activated carbon media for best performance and life long solution. The active carbon media is made from crushed coconut shell & IV900 value.\n\nTECHNICAL DETAILS AND PERFORMANCE\n900 IV (Iodine Value) Activated Carbon is a high-performance, granular, or coconut shell-based filtration medium designed for superior water purification. It excels at removing organic pollutants, chlorine, pesticides, and unpleasant Odors, often utilized in 4x8 mesh sizes for water filtration systems.",
+      description:
+        "Uses highly porous activated carbon to remove impurities, volatile organic compounds (VOCs), chemicals like chlorine, gases, and odors via adsorption.",
+      longDescription:
+        "COALLIFE carbon filter is a purification device that uses activated carbon to remove impurities and contaminants from water or air through a process called adsorption.\n\nFILTRATION PROCESS\nThese highly porous filters trap particles, chemicals (like chlorine), volatile organic compounds (VOCs), Odors, and gases. They are commonly used in water purification.\n\nACTIVATED CARBON MEDIA\nIn COALLIFE filters we use advance activated carbon media for best performance and life long solution. The active carbon media is made from crushed coconut shell & IV900 value.\n\nTECHNICAL DETAILS AND PERFORMANCE\n900 IV (Iodine Value) Activated Carbon is a high-performance, granular, or coconut shell-based filtration medium designed for superior water purification. It excels at removing organic pollutants, chlorine, pesticides, and unpleasant Odors, often utilized in 4x8 mesh sizes for water filtration systems.",
       keyBenefits: [
         "Removes organic pollutants, chlorine, pesticides, and odors",
         "High-performance activated carbon filtration",
         "Made from crushed coconut shell",
         "900 IV (Iodine Value) activated carbon",
-        "Excels at removing VOCs and gases"
+        "Excels at removing VOCs and gases",
       ],
       features: [
-        { title: "FILTRATION PROCESS", description: "These highly porous filters trap particles, chemicals (like chlorine), volatile organic compounds (VOCs), Odors, and gases. They are commonly used in water purification." },
-        { title: "ACTIVATED CARBON MEDIA", description: "In COALLIFE filters we use advance activated carbon media for best performance and life long solution. The active carbon media is made from crushed coconut shell & IV900 value." },
-        { title: "TECHNICAL DETAILS AND PERFORMANCE", description: "900 IV (Iodine Value) Activated Carbon is a high-performance, granular, or coconut shell-based filtration medium designed for superior water purification." }
+        {
+          title: "FILTRATION PROCESS",
+          description:
+            "These highly porous filters trap particles, chemicals (like chlorine), volatile organic compounds (VOCs), Odors, and gases. They are commonly used in water purification.",
+        },
+        {
+          title: "ACTIVATED CARBON MEDIA",
+          description:
+            "In COALLIFE filters we use advance activated carbon media for best performance and life long solution. The active carbon media is made from crushed coconut shell & IV900 value.",
+        },
+        {
+          title: "TECHNICAL DETAILS AND PERFORMANCE",
+          description:
+            "900 IV (Iodine Value) Activated Carbon is a high-performance, granular, or coconut shell-based filtration medium designed for superior water purification.",
+        },
       ],
-      image: "/assets/Products/coallife.jpg"
+      image: "/assets/Products/coallife.jpg",
     },
     {
       id: "metalife",
       category: "Metal Removal Filters",
       brand: "METALIFE",
-      description: "Designed to eliminate toxic heavy metals (lead, arsenic, mercury) and nuisance metals (iron, manganese) to improve water taste, odor, and safety.",
-      longDescription: "METALIFE Metal removal filters are specialized water treatment systems designed to eliminate toxic heavy metals (such as lead, arsenic, mercury, chromium) and nuisance metals (iron, manganese) from drinking or process water.\n\nBENEFITS\nThese filters protect against long-term health risks and improve water taste, Odor, and appearance.\n\nDMI-65 MEDIA\nIn METALIFE filters we use advance dmi65 media for best performance and life long solution. The DMI-65 protects and pre-treats all other water treatment systems from iron and manganese biofouling, effectively longer filter run times, and with the benefit of reduced oxidant demand and because DMI-65 Infusion technology requires no chemical regeneration.\n\nINFUSION TECHNOLOGY\nInfusion Technology increases the catalytic surface and gives DMI-65 the highest oxidation rate and load capacity of any other catalytic media. Infusion Technology allows for very small attrition loss and displays no decaying effect or loss or catalysis for up to 5 - 10 years of continuous performance.",
+      description:
+        "Designed to eliminate toxic heavy metals (lead, arsenic, mercury) and nuisance metals (iron, manganese) to improve water taste, odor, and safety.",
+      longDescription:
+        "METALIFE Metal removal filters are specialized water treatment systems designed to eliminate toxic heavy metals (such as lead, arsenic, mercury, chromium) and nuisance metals (iron, manganese) from drinking or process water.\n\nBENEFITS\nThese filters protect against long-term health risks and improve water taste, Odor, and appearance.\n\nDMI-65 MEDIA\nIn METALIFE filters we use advance dmi65 media for best performance and life long solution. The DMI-65 protects and pre-treats all other water treatment systems from iron and manganese biofouling, effectively longer filter run times, and with the benefit of reduced oxidant demand and because DMI-65 Infusion technology requires no chemical regeneration.\n\nINFUSION TECHNOLOGY\nInfusion Technology increases the catalytic surface and gives DMI-65 the highest oxidation rate and load capacity of any other catalytic media. Infusion Technology allows for very small attrition loss and displays no decaying effect or loss or catalysis for up to 5 - 10 years of continuous performance.",
       keyBenefits: [
         "Eliminates toxic heavy metals (lead, arsenic, mercury, chromium)",
         "Removes nuisance metals (iron, manganese)",
         "Protects against long-term health risks",
         "Improves water taste, odor, and appearance",
         "No chemical regeneration required",
-        "Up to 5-10 years continuous performance"
+        "Up to 5-10 years continuous performance",
       ],
       features: [
-        { title: "BENEFITS", description: "These filters protect against long-term health risks and improve water taste, Odor, and appearance." },
-        { title: "DMI-65 MEDIA", description: "In METALIFE filters we use advance dmi65 media for best performance and life long solution. The DMI-65 protects and pre-treats all other water treatment systems from iron and manganese biofouling." },
-        { title: "INFUSION TECHNOLOGY", description: "Infusion Technology increases the catalytic surface and gives DMI-65 the highest oxidation rate and load capacity of any other catalytic media." }
+        {
+          title: "BENEFITS",
+          description:
+            "These filters protect against long-term health risks and improve water taste, Odor, and appearance.",
+        },
+        {
+          title: "DMI-65 MEDIA",
+          description:
+            "In METALIFE filters we use advance dmi65 media for best performance and life long solution. The DMI-65 protects and pre-treats all other water treatment systems from iron and manganese biofouling.",
+        },
+        {
+          title: "INFUSION TECHNOLOGY",
+          description:
+            "Infusion Technology increases the catalytic surface and gives DMI-65 the highest oxidation rate and load capacity of any other catalytic media.",
+        },
       ],
-      image: "/assets/Products/metalife.jpg"
+      image: "/assets/Products/metalife.jpg",
     },
     {
       id: "hcfsam",
       category: "Hydro Cyclone",
       brand: "HCFSAM",
-      description: "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base.",
-      longDescription: "HCFSAM Hydro cyclones use centrifugal force to \"spin\" sand out of water. Often water from bores contains high levels of sand. The hydro cyclone creates a spinning action causing the heavier sand particles to separate from the water and become trapped in a storage tank at the base of the unit. Hydro cyclones are generally used in conjunction with another type of filter. Hydrocyclones are widely used upstream of a filter to first remove the bulk of the contaminant, where the filter does the final cleaning. This type of design reduces the time required to flush and clean the filter.\n\nSEPARATION PRINCIPLE\nHydrocyclones are very effective tools to separate solids from liquids. A Hydrocyclone Separator is not a true filter, since there is no screen element inside to filter out the particles.\n\nAPPLICATION AREAS\n• Cooling Towers\n• Hydropower Plants\n• Process Water Treatment\n• Iron & Steel Industry\n• All Kinds of Industries where density dependant separation is possible.\n\nOPERATING CONDITIONS AND SEPARATION EFFICIENCY\nCyclone Separators focus on the separation of settleable particles - especially having a specific gravity more than 2 gr/cm3. Bigger the specific gravity and particle sizes; better the separation efficiency. There is not a limit regarding the dirt load at the Inlet. Settled particles are purged out against time.\n\nPRESSURE AND FLOW RATE\nMinimum 1 Bar pressure is required for the efficient operation of Cyclone Separators. If the flow rate gets to a level lower than the operational range of the installed separator then it would operate with a lower efficiency (approx. 20%). If the flow rates higher than the operational range then separation efficiency would drop dramatically - approx. 50%.\n\nAUTO PURGE SYSTEM\nAuto purge system operates according to; purging interval and purging duration. Both can be adjusted based on the actual site conditions.\n\nSEPARATION EFFICIENCY\nSeparation is ensured by means of the centrifugal force. Separation efficiency is directly related with specific gravity and size distribution of the particles.\n\nADVANTAGES\n1. Separation without any interruption of flow\n2. Very low water loss - ~1-2% of total flow\n3. Very low Pressure Drop - ~0.3 Bar\n4. No need for any consumable material\n5. No need for maintenance\n6. Filtration down to 50 Micron depending on the specific gravity of the particles\n7. Capacities from 1 to 4000 m3/h\n8. Very easy installation & operation.",
+      description:
+        "Uses centrifugal force to spin heavy sand particles out of bore water, trapping them in a storage tank at the base.",
+      longDescription:
+        'HCFSAM Hydro cyclones use centrifugal force to "spin" sand out of water. Often water from bores contains high levels of sand. The hydro cyclone creates a spinning action causing the heavier sand particles to separate from the water and become trapped in a storage tank at the base of the unit. Hydro cyclones are generally used in conjunction with another type of filter. Hydrocyclones are widely used upstream of a filter to first remove the bulk of the contaminant, where the filter does the final cleaning. This type of design reduces the time required to flush and clean the filter.\n\nSEPARATION PRINCIPLE\nHydrocyclones are very effective tools to separate solids from liquids. A Hydrocyclone Separator is not a true filter, since there is no screen element inside to filter out the particles.\n\nAPPLICATION AREAS\n• Cooling Towers\n• Hydropower Plants\n• Process Water Treatment\n• Iron & Steel Industry\n• All Kinds of Industries where density dependant separation is possible.\n\nOPERATING CONDITIONS AND SEPARATION EFFICIENCY\nCyclone Separators focus on the separation of settleable particles - especially having a specific gravity more than 2 gr/cm3. Bigger the specific gravity and particle sizes; better the separation efficiency. There is not a limit regarding the dirt load at the Inlet. Settled particles are purged out against time.\n\nPRESSURE AND FLOW RATE\nMinimum 1 Bar pressure is required for the efficient operation of Cyclone Separators. If the flow rate gets to a level lower than the operational range of the installed separator then it would operate with a lower efficiency (approx. 20%). If the flow rates higher than the operational range then separation efficiency would drop dramatically - approx. 50%.\n\nAUTO PURGE SYSTEM\nAuto purge system operates according to; purging interval and purging duration. Both can be adjusted based on the actual site conditions.\n\nSEPARATION EFFICIENCY\nSeparation is ensured by means of the centrifugal force. Separation efficiency is directly related with specific gravity and size distribution of the particles.\n\nADVANTAGES\n1. Separation without any interruption of flow\n2. Very low water loss - ~1-2% of total flow\n3. Very low Pressure Drop - ~0.3 Bar\n4. No need for any consumable material\n5. No need for maintenance\n6. Filtration down to 50 Micron depending on the specific gravity of the particles\n7. Capacities from 1 to 4000 m3/h\n8. Very easy installation & operation.',
       keyBenefits: [
         "Centrifugal separation of sand from water",
         "Ideal upstream of filters to reduce flush time",
         "Effective for high dirt load at inlet",
         "Auto purge system with adjustable intervals",
-        "Widely used across industries"
+        "Widely used across industries",
       ],
       features: [
-        { title: "SEPARATION PRINCIPLE", description: "Hydrocyclones are very effective tools to separate solids from liquids. A Hydrocyclone Separator is not a true filter, since there is no screen element inside to filter out the particles." },
-        { title: "APPLICATION AREAS", description: "Cooling Towers, Hydropower Plants, Process Water Treatment, Iron & Steel Industry, and all kinds of industries where density dependant separation is possible." },
-        { title: "AUTO PURGE SYSTEM", description: "Auto purge system operates according to; purging interval and purging duration. Both can be adjusted based on the actual site conditions." }
+        {
+          title: "SEPARATION PRINCIPLE",
+          description:
+            "Hydrocyclones are very effective tools to separate solids from liquids. A Hydrocyclone Separator is not a true filter, since there is no screen element inside to filter out the particles.",
+        },
+        {
+          title: "APPLICATION AREAS",
+          description:
+            "Cooling Towers, Hydropower Plants, Process Water Treatment, Iron & Steel Industry, and all kinds of industries where density dependant separation is possible.",
+        },
+        {
+          title: "AUTO PURGE SYSTEM",
+          description:
+            "Auto purge system operates according to; purging interval and purging duration. Both can be adjusted based on the actual site conditions.",
+        },
       ],
       image: "/assets/Products/hcfsam.jpg",
-      images: [
-        "/assets/Products/hcfsam.jpg",
-        "/assets/Products/hcfsam2.jpg"
-      ]
+      images: ["/assets/Products/hcfsam.jpg", "/assets/Products/hcfsam2.jpg"],
     },
     {
       id: "hdlsam",
       category: "Hydraulic Filters",
       brand: "HDLSAM",
-      description: "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h.",
-      longDescription: "The HDLSAM Hydraulic filters are mid-range automatic filters, ideal for remote installation sites, with a water-driven self-cleaning mechanism that doesn't require external power source to operate.\n\nTECHNICAL SPECIFICATIONS\nWith their various screen areas, the Hydraulic filters support flow-rates of up to 400 m3/h, with filtration degrees of 500 down to 80 micron and inlet/outlet diameters from 2\"-10\".\n\nTHE FILTERING PROCESS\nThe filtration process begins when raw water flows through the filter inlet into the coarse screen. Here, the water is pre-filtered in order to protect the cleaning mechanism from large debris. The water then passes through the inner surface of the fine screen; dirt particles are trapped and accumulate inside the filter while clean water flows through the filter outlet. The gradual dirt buildup on the inner screen surface causes a filter cake to develop, with a corresponding increase in the pressure differential across the screen.\n\nTHE SELF-CLEANING PROCESS\nWhen the pressure differential across the screen reaches a pre-set level of 0.5 bar (7 psi), the Hydraulic filter's rinse controller starts the cleaning process by opening the internal flush valve. This results in the release of a back-flush stream flowing through the nozzles out of the hollow Suction Scanner Shaft and the Turbine to the Drainage pipe.",
+      description:
+        "Mid-range automatic filters with a water-driven self-cleaning mechanism requiring no external power; supports flow rates up to 400 m³/h.",
+      longDescription:
+        "The HDLSAM Hydraulic filters are mid-range automatic filters, ideal for remote installation sites, with a water-driven self-cleaning mechanism that doesn't require external power source to operate.\n\nTECHNICAL SPECIFICATIONS\nWith their various screen areas, the Hydraulic filters support flow-rates of up to 400 m3/h, with filtration degrees of 500 down to 80 micron and inlet/outlet diameters from 2\"-10\".\n\nTHE FILTERING PROCESS\nThe filtration process begins when raw water flows through the filter inlet into the coarse screen. Here, the water is pre-filtered in order to protect the cleaning mechanism from large debris. The water then passes through the inner surface of the fine screen; dirt particles are trapped and accumulate inside the filter while clean water flows through the filter outlet. The gradual dirt buildup on the inner screen surface causes a filter cake to develop, with a corresponding increase in the pressure differential across the screen.\n\nTHE SELF-CLEANING PROCESS\nWhen the pressure differential across the screen reaches a pre-set level of 0.5 bar (7 psi), the Hydraulic filter's rinse controller starts the cleaning process by opening the internal flush valve. This results in the release of a back-flush stream flowing through the nozzles out of the hollow Suction Scanner Shaft and the Turbine to the Drainage pipe.",
       keyBenefits: [
         "Water-driven self-cleaning, no external power",
         "Ideal for remote installation sites",
         "Flow rates up to 400 m3/h",
         "Filtration degrees 500 down to 80 micron",
-        "Inlet/outlet diameters 2\"-10\""
+        'Inlet/outlet diameters 2"-10"',
       ],
       features: [
-        { title: "TECHNICAL SPECIFICATIONS", description: "With their various screen areas, the Hydraulic filters support flow-rates of up to 400 m3/h, with filtration degrees of 500 down to 80 micron and inlet/outlet diameters from 2\"-10\"." },
-        { title: "THE FILTERING PROCESS", description: "The filtration process begins when raw water flows through the filter inlet into the coarse screen. Here, the water is pre-filtered in order to protect the cleaning mechanism from large debris." },
-        { title: "THE SELF-CLEANING PROCESS", description: "When the pressure differential across the screen reaches a pre-set level of 0.5 bar (7 psi), the Hydraulic filter's rinse controller starts the cleaning process by opening the internal flush valve." }
+        {
+          title: "TECHNICAL SPECIFICATIONS",
+          description:
+            'With their various screen areas, the Hydraulic filters support flow-rates of up to 400 m3/h, with filtration degrees of 500 down to 80 micron and inlet/outlet diameters from 2"-10".',
+        },
+        {
+          title: "THE FILTERING PROCESS",
+          description:
+            "The filtration process begins when raw water flows through the filter inlet into the coarse screen. Here, the water is pre-filtered in order to protect the cleaning mechanism from large debris.",
+        },
+        {
+          title: "THE SELF-CLEANING PROCESS",
+          description:
+            "When the pressure differential across the screen reaches a pre-set level of 0.5 bar (7 psi), the Hydraulic filter's rinse controller starts the cleaning process by opening the internal flush valve.",
+        },
       ],
       image: "/assets/Products/HDLSAM.jpg",
       images: [
@@ -258,80 +463,114 @@ export const companyInfo = {
         // "/assets/Products/hdlsam1.jpg",
         "/assets/Products/hdlsam2.jpg",
         "/assets/Products/hdlsam3.jpg",
-        "/assets/Products/hdlsam4.jpg"
-      ]
+        "/assets/Products/hdlsam4.jpg",
+      ],
     },
     {
       id: "ecosam",
       category: "Lamella Plate Settler",
       brand: "ECOSAM",
-      description: "High-rate gravity sedimentation devices that remove suspended solids, reducing necessary tank sizes by 80% to 90% compared to conventional clarifiers.",
-      longDescription: "ECOSAM Lamella plate settler are high-rate gravity sedimentation devices designed to remove suspended solids from liquids. They are used extensively in water and wastewater treatment to provide a large settling surface area within a compact footprint, often reducing the necessary tank size by 80% to 90% compared to conventional clarifiers.\n\nHIGH-EFFICIENCY SEPARATION\nUses inclined plates (50 to 60 degrees) to promote laminar flow.\n\nCOMPACT DESIGN\nIdeal for applications with limited space; often modular for easy expansion.\n\nMECHANISM\nParticles settle onto the plates and slide down to a hopper, often aided by flocculant addition for higher turbidity water.\n\nHIGH RELIABILITY\nMinimal moving parts allow for lower maintenance compared to other clarifying technologies.",
+      description:
+        "High-rate gravity sedimentation devices that remove suspended solids, reducing necessary tank sizes by 80% to 90% compared to conventional clarifiers.",
+      longDescription:
+        "ECOSAM Lamella plate settler are high-rate gravity sedimentation devices designed to remove suspended solids from liquids. They are used extensively in water and wastewater treatment to provide a large settling surface area within a compact footprint, often reducing the necessary tank size by 80% to 90% compared to conventional clarifiers.\n\nHIGH-EFFICIENCY SEPARATION\nUses inclined plates (50 to 60 degrees) to promote laminar flow.\n\nCOMPACT DESIGN\nIdeal for applications with limited space; often modular for easy expansion.\n\nMECHANISM\nParticles settle onto the plates and slide down to a hopper, often aided by flocculant addition for higher turbidity water.\n\nHIGH RELIABILITY\nMinimal moving parts allow for lower maintenance compared to other clarifying technologies.",
       keyBenefits: [
         "High-rate gravity sedimentation",
         "Reduces tank size by 80% to 90%",
         "Compact footprint, modular design",
         "Uses inclined plates (50 to 60 degrees)",
-        "Minimal moving parts, low maintenance"
+        "Minimal moving parts, low maintenance",
       ],
       features: [
-        { title: "HIGH-EFFICIENCY SEPARATION", description: "Uses inclined plates (50 to 60 degrees) to promote laminar flow." },
-        { title: "COMPACT DESIGN", description: "Ideal for applications with limited space; often modular for easy expansion." },
-        { title: "HIGH RELIABILITY", description: "Minimal moving parts allow for lower maintenance compared to other clarifying technologies." }
+        {
+          title: "HIGH-EFFICIENCY SEPARATION",
+          description:
+            "Uses inclined plates (50 to 60 degrees) to promote laminar flow.",
+        },
+        {
+          title: "COMPACT DESIGN",
+          description:
+            "Ideal for applications with limited space; often modular for easy expansion.",
+        },
+        {
+          title: "HIGH RELIABILITY",
+          description:
+            "Minimal moving parts allow for lower maintenance compared to other clarifying technologies.",
+        },
       ],
-      image: "/assets/Products/ecosam.jpg"
+      image: "/assets/Products/ecosam.jpg",
     },
     {
       id: "mixsam",
       category: "Static Mixer",
       brand: "MIXSAM",
-      description: "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption.",
-      longDescription: "MIXSAM static mixer is an inline device that continuously blends two or more fluid streams (liquids or gases) without moving parts. It uses fixed internal elements to divide and recombine flow, creating homogeneous mixtures with low energy consumption and low maintenance. They are essential in industries like chemical processing, water treatment, and adhesive dispensing.\n\nMECHANISM\nIn laminar flow, fluids are split into layers while turbulent flow uses vortex generation for radial mixing.\n\nDESIGN\nConsists of a housing (pipe) containing stationary elements (helical or plate-type).\n\nCONSTRUCTION MATERIALS\nAvailable in materials such as 316 Stainless Steel, MS to suit chemical compatibility.\n\nNO MOVING PARTS\nLowers maintenance requirements and eliminates the need for external motors.",
+      description:
+        "An inline device with no moving parts that continuously blends fluid streams using fixed internal elements, offering low energy consumption.",
+      longDescription:
+        "MIXSAM static mixer is an inline device that continuously blends two or more fluid streams (liquids or gases) without moving parts. It uses fixed internal elements to divide and recombine flow, creating homogeneous mixtures with low energy consumption and low maintenance. They are essential in industries like chemical processing, water treatment, and adhesive dispensing.\n\nMECHANISM\nIn laminar flow, fluids are split into layers while turbulent flow uses vortex generation for radial mixing.\n\nDESIGN\nConsists of a housing (pipe) containing stationary elements (helical or plate-type).\n\nCONSTRUCTION MATERIALS\nAvailable in materials such as 316 Stainless Steel, MS to suit chemical compatibility.\n\nNO MOVING PARTS\nLowers maintenance requirements and eliminates the need for external motors.",
       keyBenefits: [
         "No moving parts, low maintenance",
         "Low energy consumption",
         "Homogeneous mixing of fluid streams",
         "Essential for chemical processing & water treatment",
-        "Available in 316 SS, MS materials"
+        "Available in 316 SS, MS materials",
       ],
       features: [
-        { title: "MECHANISM", description: "In laminar flow, fluids are split into layers while turbulent flow uses vortex generation for radial mixing." },
-        { title: "DESIGN", description: "Consists of a housing (pipe) containing stationary elements (helical or plate-type)." },
-        { title: "NO MOVING PARTS", description: "Lowers maintenance requirements and eliminates the need for external motors." }
+        {
+          title: "MECHANISM",
+          description:
+            "In laminar flow, fluids are split into layers while turbulent flow uses vortex generation for radial mixing.",
+        },
+        {
+          title: "DESIGN",
+          description:
+            "Consists of a housing (pipe) containing stationary elements (helical or plate-type).",
+        },
+        {
+          title: "NO MOVING PARTS",
+          description:
+            "Lowers maintenance requirements and eliminates the need for external motors.",
+        },
       ],
       image: "/assets/Products/mixsam.jpg",
-      images: [
-        "/assets/Products/mixsam.jpg",
-        "/assets/Products/mixsam2.jpg"
-      ]
-    }
+      images: ["/assets/Products/mixsam.jpg", "/assets/Products/mixsam2.jpg"],
+    },
   ],
   hseq: {
-    environmental: "AMR Engineering Works is strictly committed to minimizing negative environmental impacts by reducing waste and preventing pollution. We continually monitor, review, and revise our quality and environmental objectives and targets annually.",
-    processes: "Our Quality Management Processes are categorized into Quality Planning, Quality Assurance, and Quality Control. A dedicated Project Quality Plan (PQP) links specific client requirements to our internal Quality Management System.",
-    safety: "We view safety as an integral part of efficient management and organizational performance. We ensure that suitable working conditions and safe work practices are established and continually improved. We recognize that safe operations contribute directly to cost control, loss prevention, and the reduction of occupational health incidents."
+    environmental:
+      "AMR Engineering Works is strictly committed to minimizing negative environmental impacts by reducing waste and preventing pollution. We continually monitor, review, and revise our quality and environmental objectives and targets annually.",
+    processes:
+      "Our Quality Management Processes are categorized into Quality Planning, Quality Assurance, and Quality Control. A dedicated Project Quality Plan (PQP) links specific client requirements to our internal Quality Management System.",
+    safety:
+      "We view safety as an integral part of efficient management and organizational performance. We ensure that suitable working conditions and safe work practices are established and continually improved. We recognize that safe operations contribute directly to cost control, loss prevention, and the reduction of occupational health incidents.",
   },
   news: [
     {
       title: "The Future of Automated Engineering in India",
       date: "12 Jun 2026",
       category: "Industry",
-      summary: "Exploring the pivotal role of automated filtration and settling solutions in the evolving Indian industrial landscape.",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+      summary:
+        "Exploring the pivotal role of automated filtration and settling solutions in the evolving Indian industrial landscape.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "How to Increase Lifespan of Heavy Machinery",
       date: "28 May 2026",
       category: "Maintenance",
-      summary: "Expert insights into preventive maintenance, inline static mixing, and self-cleaning filter management.",
-      imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+      summary:
+        "Expert insights into preventive maintenance, inline static mixing, and self-cleaning filter management.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "AMR Engineering at the 2026 Industrial Expo",
       date: "05 May 2026",
       category: "Company News",
-      summary: "Showcasing our latest ISO certified high-rate Lamella clarifiers and HCFSAM Hydro Cyclones in Mumbai.",
-      imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
-    }
-  ]
+      summary:
+        "Showcasing our latest ISO certified high-rate Lamella clarifiers and HCFSAM Hydro Cyclones in Mumbai.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
 };
